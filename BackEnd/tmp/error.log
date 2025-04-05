@@ -1,23 +1,8 @@
-[2025-03-30T12:39:50.415] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:39:59.742] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:42:30.383] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-03-30T12:43:37.534] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:43:43.167] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:43:52.887] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:44:02.087] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:44:49.343] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:44:54.285] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:45:00.639] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T12:46:07.675] [ERROR] error - Error Handler(404): Error: Error al actualizar el Plan
-[2025-03-30T12:46:13.829] [ERROR] error - Error Handler(404): Error: Error al actualizar el Plan
-[2025-03-30T17:11:36.031] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T17:16:21.088] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T17:16:45.229] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
-[2025-03-30T17:17:13.630] [FATAL] error - NO EXISTE LA RUTA/user/
-[2025-03-30T17:17:13.644] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
-[2025-03-30T17:17:22.167] [FATAL] error - NO EXISTE LA RUTA/user/
-[2025-03-30T17:17:22.169] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
-[2025-03-30T18:12:29.539] [ERROR] error - Error Handler(400): Error: Error al eliminar el usuario
-[2025-03-30T18:12:42.752] [ERROR] error - Error Handler(400): Error: Error al eliminar el usuario
-[2025-03-30T18:13:09.435] [ERROR] error - Error Handler(400): Error: Error al eliminar el usuario
-[2025-03-30T18:14:24.285] [ERROR] error - Error Handler(404): Error: [object Object]
+[2025-04-05T19:28:20.365] [ERROR] error - Error Handler(404): Error: Error al crear el progreso
+[2025-04-05T19:28:30.286] [ERROR] error - Error Handler(404): Error: Error al crear el progreso
+[2025-04-05T19:29:39.603] [ERROR] error - Error Handler(404): Error: Error al crear el progreso
+[2025-04-05T19:29:46.063] [ERROR] error - Error Handler(404): Error: Error al crear el progreso
+[2025-04-05T19:32:12.308] [FATAL] error - NO EXISTE LA RUTA/progres
+[2025-04-05T19:32:12.309] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-05T20:06:09.056] [FATAL] error - NO EXISTE LA RUTA/progres
+[2025-04-05T20:06:09.057] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA

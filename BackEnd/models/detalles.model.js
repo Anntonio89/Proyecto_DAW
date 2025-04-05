@@ -1,19 +1,24 @@
 const mysql=require('mysql')//Se importa MySQL para manejar la conexion
 const dbConn=require('../utils/mysql.config')//Importacion conexion a la DB de MySQL
 
-//Modelo del Exercice (constructro)
-let Exercice = function(exercice){
-    //Atributos del Exercice
+//Modelo del Detail (constructro)
+let Detail = function(detalle){
+
+    //Atributos del detalle
     //id (auto incremental)
-    this.nombre=exercice.nombre,
-    this.descripcion=exercice.descripcion
-    this.imagen=exercice.imagen
+    this.id_plan=detalle.id_plan    
+    this.id_ejercicio=detalle.id_ejercicio
+    this.dia_semana=detalle.dia_semana
+    this.series=detalle.series
+    this.repeticiones=detalle.repeticiones
+    this.descanso=detalle.descanso
+    
 }
 
 //Metodos del modelo
 
-//Obtener todos los Exercicees entrenamiento
-Exercice.findAll = async function(result){
+//Obtener todos los detalles del entrenamiento
+Detail.findAll = async function(result){
     //Se crea la conexion
     let connection = mysql.createConnection(dbConn)
 
@@ -23,7 +28,7 @@ Exercice.findAll = async function(result){
             console.log('Error con la conexión a MySQL. Des: ' + error)
         }else{
             console.log('Conexión a MySQL abierta')
-            const sql = 'SELECT * FROM ejercicios'//SQL para obtener todos los ejercicios
+            const sql = 'SELECT * FROM detalles_plan'//SQL para obtener todos los detalles
             //Se ejecuta la consulta
             connection.query(sql, function(err, datos){//En caso de error se muestra el error, en caso contrario se devuelven los datos
                 if(err){
@@ -44,8 +49,9 @@ Exercice.findAll = async function(result){
     })
 }
 
-//Obtener un ejercicio por su id
-Exercice.findById = async function(idExercice, result){
+
+//Obtener un detalle por su id
+Detail.findById = async function(idDetail, result){
 
     let connection=mysql.createConnection(dbConn)
 
@@ -55,15 +61,15 @@ Exercice.findById = async function(idExercice, result){
             result(err,null)
         }else{
             console.log('Conexión a MySQL abierta')
-            const sql = 'SELECT * FROM ejercicios WHERE id = ?'//SQL para obtener un Exercice
-            connection.query(sql, idExercice, (err,datos)=>{
+            const sql = 'SELECT * FROM detalles_plan WHERE id = ?'//SQL para obtener un detalle
+            connection.query(sql, idDetail, (err,datos)=>{
                 if(err){
                     result(err,null)
                 }else{
                     if(datos.length>0){
                         result(null,datos)//En caso de haber datos, se devuelven
                     }else{
-                        result({error: 'No existe el Exercice de entrenamiento'},null)//En caso de no haber datos, se muestra el mensaje
+                        result({error: 'No existe el detalle de entrenamiento'},null)//En caso de no haber datos, se muestra el mensaje
                     }
                 }
             })
@@ -80,8 +86,8 @@ Exercice.findById = async function(idExercice, result){
     })
 }
 
-//Crear ejercicio
-Exercice.create = async function(newExercice, result){
+//Crear detalle
+Detail.create = async function(newDetail, result){
 
     let connection=mysql.createConnection(dbConn)
 
@@ -92,13 +98,13 @@ Exercice.create = async function(newExercice, result){
         }else{
             console.log('Conexión a MySQL abierta')
 
-            const sql = 'INSERT INTO ejercicios SET ?'//SQL para insertar un nuevo ejercicio
-            connection.query(sql, newExercice, (err,datos)=>{
+            const sql = 'INSERT INTO detalles_plan SET ?'//SQL para insertar un nuevo Detail
+            connection.query(sql, newDetail, (err,datos)=>{
                 if(err){
-                    console.log('Error al crear el ejercicio: ' + err)
+                    console.log('Error al crear el detalle de entrenamiento: ' + err)
                     result(err,null)
                 }else{
-                    result(null, {id: datos.insertId, ...newExercice})//Se devuelven el id del ejercicio creado y el nuevo ejercicio con propagacion para recorrer sus propiedades
+                    result(null, {id: datos.insertId, ...newDetail})//Se devuelven el id del Detail creado y el nuevo detalle con propagacion para recorrer sus propiedades
                 }
             })
             connection.end((err)=>{
@@ -112,14 +118,14 @@ Exercice.create = async function(newExercice, result){
     })
 }
 
-//Buscar a un Exercice por un filtro
-Exercice.findByFilter = async(filter)=>{
-    const ExerciceFound=await Exercice.findOne(filter)
-    return ExerciceFound
+//Buscar a un detalle por un filtro
+Detail.findByFilter = async(filter)=>{
+    const DetailFound=await Detail.findOne(filter)
+    return DetailFound
 }
 
-//Actualizar un Exercice
-Exercice.update = async function(idExercice, updateExercice, result){
+//Actualizar un detalle
+Detail.update = async function(idDetail, updateDetail, result){
 
     let connection=mysql.createConnection(dbConn)
 
@@ -129,8 +135,8 @@ Exercice.update = async function(idExercice, updateExercice, result){
             result(err,null)
         }else{
             console.log('Conexión a MySQL abierta')
-            const sql = 'UPDATE ejercicios SET ? WHERE id = ?'//SQL para obtener un ejercicio
-            connection.query(sql, [updateExercice,idExercice], (err,datos)=>{
+            const sql = 'UPDATE detalles_plan SET ? WHERE id = ?'//SQL para obtener un detalle
+            connection.query(sql, [updateDetail,idDetail], (err,datos)=>{
                 if(err){
                     result(err,null)
                 }else{
@@ -150,8 +156,8 @@ Exercice.update = async function(idExercice, updateExercice, result){
 }
 
 
-//Borrar un Exercice
-Exercice.delete = async function(idExercice, result){
+//Borrar un Detail
+Detail.delete = async function(idDetail, result){
 
     let connection=mysql.createConnection(dbConn)
 
@@ -161,8 +167,8 @@ Exercice.delete = async function(idExercice, result){
             result(err,null)
         }else{
             console.log('Conexión a MySQL abierta')
-            const sql = 'DELETE FROM ejercicios WHERE id = ?'//SQL para borrar un ejercicio
-            connection.query(sql, idExercice, (err,datos)=>{
+            const sql = 'DELETE FROM detalles_plan WHERE id = ?'//SQL para borrar un Detail
+            connection.query(sql, idDetail, (err,datos)=>{
                 if(err){
                     result(err,null)
                 }else{
@@ -181,4 +187,4 @@ Exercice.delete = async function(idExercice, result){
     })
 }
 
-module.exports = Exercice//Se exporta el modelo
+module.exports = Detail//Se exporta el modelo
