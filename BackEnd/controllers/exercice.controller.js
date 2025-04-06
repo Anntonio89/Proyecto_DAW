@@ -28,7 +28,10 @@ exports.findExerciceById=wrapAsync(async function(req,res,next){
 
 //Crear un Exercice
 exports.createExercice=wrapAsync(async function(req,res,next){
-    const newExercice= new exerciceModel(req.body)
+
+    const imagen = req.file ? req.file.filename : null//Se verifica si hay imagen ya cargada
+
+    const newExercice= new exerciceModel({...req.body, imagen})
 
     await exerciceModel.create(newExercice, function(err, datosEjercicioCreado){
         if(err){
@@ -46,9 +49,9 @@ exports.updateExercice=wrapAsync(async function (req,res,next){
 
     await exerciceModel.update(id, updateExercice, function(err,datosEjercicio){
         if(err|| !datosEjercicio){
-            next(new AppError('Error al actualizar el Exercice',404))
+            next(new AppError('Error al actualizar el ejercicio',404))
         }else{
-            res.status(200).json({message:'Exercice editado con exito', datosEjercicio})
+            res.status(200).json({message:'Ejercicio editado con exito', datosEjercicio})
         }
     })
 })

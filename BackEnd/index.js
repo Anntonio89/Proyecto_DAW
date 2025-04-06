@@ -12,6 +12,7 @@ const userRoutes=require('./routes/user.routes')
 const planRoutes=require('./routes/plan.routes')
 const exerciceRoutes=require('./routes/exercice.routes')
 const progresRoutes = require('./routes/progres.route')
+const detailsRoutes = require('./routes/detalles.routes')
 
 //MIDDLEWARES
 const morganMW=require("./middlewares/morgan.mw")
@@ -30,6 +31,7 @@ app.use('/users',userRoutes)
 app.use('/plan',planRoutes)
 app.use('/exercice',exerciceRoutes)
 app.use('/progres',progresRoutes)
+app.use('/details',detailsRoutes)
 
 app.use((req,res)=>{
     logger.error.fatal('NO EXISTE LA RUTA' +req.originalUrl)
