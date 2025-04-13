@@ -6,7 +6,10 @@ let Exercice = function(exercice){
     //Atributos del Exercice
     //id (auto incremental)
     this.nombre=exercice.nombre,
-    this.descripcion=exercice.descripcion
+    this.categoria=exercice.categoria,
+    this.grupo_muscular=exercice.grupo_muscular,
+    this.nivel=exercice.nivel,
+    this.descripcion=exercice.descripcion,
     this.imagen=exercice.imagen
 }
 

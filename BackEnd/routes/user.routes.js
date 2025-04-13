@@ -3,6 +3,9 @@ const router=express.Router()
 const userController = require('../controllers/user.controller')
 const {user}=require('../utils/mysql.config')
 
+
+router.post('/login',userController.login)
+router.get('/logout',userController.logout)
 router.get('/', userController.findAllUsers)
 router.get('/:id', userController.findUserById)
 router.post('/', userController.createUser)

@@ -1,1 +1,9 @@
-[2025-04-06T19:46:51.870] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-13T19:05:55.271] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-13T19:08:07.363] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-13T19:10:23.433] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [13/Apr/2025:17:10:37 +0000] "GET /users HTTP/1.1" 200 487 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [13/Apr/2025:17:11:11 +0000] "POST /users HTTP/1.1" 201 209 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [13/Apr/2025:17:11:49 +0000] "POST /login HTTP/1.1" 404 27 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [13/Apr/2025:17:18:22 +0000] "POST /users/login HTTP/1.1" 200 652 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [13/Apr/2025:17:18:30 +0000] "POST /users/logout HTTP/1.1" 404 27 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [13/Apr/2025:17:18:43 +0000] "GET /users/logout HTTP/1.1" 200 40 "-" "insomnia/10.3.0"

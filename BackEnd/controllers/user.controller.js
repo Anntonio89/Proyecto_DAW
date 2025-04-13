@@ -2,6 +2,37 @@ const userModel = require('../models/user.model')
 const {wrapAsync}=require('../utils/functions')
 const AppError=require('../utils/AppError')
 const bcrypt=require('../utils/bcrypt')
+const jwt=require('../middlewares/jwt.mw')
+
+exports.login=wrapAsync(async(req,res,next)=>{
+    const {email,password}=req.body
+    await userModel.findByEmail(email,async function(err, userFound){
+        if(err){
+            next (new AppError(err,404))
+        }else{
+            const valid= await bcrypt.compareLogin(password,userFound.password)
+            if(valid){
+                const jwtToken=jwt.createJWT(req,res,next,userFound)
+                const userLogued={
+                    data:userFound,
+                    token:jwtToken
+                }
+                req.session.userLogued=userLogued//Token guardado en sesion de usuario
+                res.status(200).json(userLogued)
+            }else{
+                next(new AppError('Usuario y/o contraseña incorrectos',401))
+            }
+        }
+    })
+})
+
+exports.logout=(req,res,next)=>{
+    req.session.destroy()
+    res.status(200).json({message:'Sesión cerrada con éxito'})
+}
+
+// *********************SHOW LOGIN Y SHOWDATAUSER***************************
+//************************************************************************** 
 
 //Encontrar todos los usuarios
 exports.findAllUsers=wrapAsync(async function (req,res, next){
@@ -48,7 +79,6 @@ exports.updateUser=wrapAsync(async function (req,res,next){
     const updateUser=new userModel(req.body)
 
     updateUser.password=await bcrypt.hashPassword(updateUser.password)//Se encripta la contraseña al crear al usuario nuevo
-
 
     await userModel.update(id, updateUser, function(err,datosUsuario){
         if(err|| !datosUsuario){

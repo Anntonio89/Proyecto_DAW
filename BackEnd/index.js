@@ -19,12 +19,42 @@ const morganMW=require("./middlewares/morgan.mw")
 const logger=require('./utils/logger')
 const errorHandlerMW=require('./middlewares/errorHandler.mw')
 const AppError=require('./utils/AppError')
+const cors=require('cors')
 
 //CONFIGURACIONES
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:true}))//Permite leer datos (request body) en metodos post
 app.use(express.json())//Para leer datos JSON en req body de POST
+
+//const whitelist=['http://localhost:3015','http://127.0.0.1:3015']
+
+// const corsOptions={
+//     origin:(origin,callback)=>{
+//         //Se permite la conexión externa (FrontEnd) y conexiones internas desde el propio API
+//         if(whitelist.includes(origin) || !origin){
+//             callback(null,true)
+//         }else{
+//             callback(new AppError('Conexión no permitida',403))
+//         }
+//     },
+//     credentials:true//Se envia la cookie
+// }
+// app.use(cors(corsOptions))
+
+app.use(cors())//Cors abierto a todo
+
 app.use(morganMW.usingMorgan())
+
+app.use(session({
+    name:"connect.sid",
+    secret:process.env.SECRET_SESSION,
+    resave:false,
+    saveUninitialized:false,
+    cookie:{
+        maxage:3600000,
+        sameSite:"none"
+    }
+}))
 
 //RUTAS
 app.use('/users',userRoutes)

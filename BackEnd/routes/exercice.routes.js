@@ -7,7 +7,7 @@ const {upload}=require('../middlewares/images.mw')//configuracion del multer
 router.get('/', exerciceModel.findAllExercices)
 router.get('/:id', exerciceModel.findExerciceById)
 router.post('/',upload.single('imagen'), exerciceModel.createExercice)
-router.put('/:id',exerciceModel.updateExercice)
+router.put('/:id',upload.single('imagen'),exerciceModel.updateExercice)
 router.delete('/:id', exerciceModel.deleteExercice)
 
 module.exports=router

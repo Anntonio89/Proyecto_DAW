@@ -45,7 +45,12 @@ exports.createExercice=wrapAsync(async function(req,res,next){
 //Actualizar un Exercice
 exports.updateExercice=wrapAsync(async function (req,res,next){
     const id=req.params.id
-    const updateExercice=new exerciceModel(req.body)
+
+    const imagen = req.file ? req.file.filename : req.body.imagen || null//Si ya hay imagen, se emplea, si no se usa el que se envia desde el body o si no null.
+    //Se permite actualizar la imagen del ejercicio
+    const updateExer={ ...req.boy, imagen}
+
+    const updateExercice = new exerciceModel(updateExer)
 
     await exerciceModel.update(id, updateExercice, function(err,datosEjercicio){
         if(err|| !datosEjercicio){

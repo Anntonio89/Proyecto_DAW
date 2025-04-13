@@ -1,0 +1,3 @@
+[2025-04-06T19:46:51.870] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [13/Apr/2025:17:06:19 +0000] "GET /users HTTP/1.1" 200 487 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [13/Apr/2025:17:06:57 +0000] "GET /login HTTP/1.1" 404 27 "-" "insomnia/10.3.0"
