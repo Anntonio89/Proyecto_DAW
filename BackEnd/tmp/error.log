@@ -1,6 +1,11 @@
-[2025-04-13T19:06:57.925] [FATAL] error - NO EXISTE LA RUTA/login
-[2025-04-13T19:06:57.925] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
-[2025-04-13T19:11:49.017] [FATAL] error - NO EXISTE LA RUTA/login
-[2025-04-13T19:11:49.017] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
-[2025-04-13T19:18:30.443] [FATAL] error - NO EXISTE LA RUTA/users/logout
-[2025-04-13T19:18:30.443] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-18T11:17:07.995] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:17:39.576] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:18:26.375] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:18:53.779] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:28:58.099] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:29:05.476] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:44:21.109] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:47:33.413] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:47:56.103] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:50:43.897] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:52:30.941] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
