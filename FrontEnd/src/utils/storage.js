@@ -3,8 +3,11 @@ export const storage={
         const data=localStorage.getItem(key)
         if(!data){
             return null
+        }try {
+            return JSON.parse(data)            
+        } catch (error) {
+            return null
         }
-        return JSON.parse(data)
     },
     set(key,data){
         localStorage.setItem(key,JSON.stringify(data))

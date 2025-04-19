@@ -1,0 +1,37 @@
+[2025-04-18T11:17:07.995] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:17:39.576] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:18:26.375] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:18:53.779] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:28:58.099] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:29:05.476] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:44:21.109] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:47:33.413] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T11:47:56.103] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:50:43.897] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T11:52:30.941] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
+[2025-04-18T20:05:35.206] [FATAL] error - NO EXISTE LA RUTA/plans
+[2025-04-18T20:05:35.206] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-18T20:06:05.997] [ERROR] error - Error Handler(401): Error: No hay token
+[2025-04-18T20:15:29.030] [ERROR] error - Error Handler(401): Error: No hay token
+[2025-04-18T20:29:48.363] [ERROR] error - Error Handler(401): Error: No hay token
+[2025-04-18T20:30:09.028] [ERROR] error - Error Handler(403): Error: Acceso Denegado
+[2025-04-18T20:30:49.187] [ERROR] error - Error Handler(403): Error: Acceso Denegado
+[2025-04-18T20:31:15.075] [ERROR] error - Error Handler(401): Error: No hay token
+[2025-04-18T20:49:41.824] [ERROR] error - Error Handler(403): Error: Acceso Denegado
+[2025-04-18T20:50:58.376] [ERROR] error - Error Handler(404): Error: [object Object]
+[2025-04-18T20:51:43.942] [ERROR] error - Error Handler(400): Error: Error al eliminar el usuario
+[2025-04-18T20:52:27.632] [ERROR] error - Error Handler(400): Error: Error al eliminar el usuario
+[2025-04-18T20:53:03.414] [ERROR] error - Error Handler(400): Error: Error al eliminar el usuario
+[2025-04-18T20:55:42.837] [ERROR] error - Error Handler(404): Error: [object Object]
+[2025-04-18T20:56:57.913] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
+[2025-04-18T21:01:07.944] [FATAL] error - NO EXISTE LA RUTA/users/
+[2025-04-18T21:01:07.945] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-18T21:01:42.418] [ERROR] error - Error Handler(500): Error: data and salt arguments required
+[2025-04-18T21:03:44.101] [ERROR] error - Error Handler(400): SyntaxError: Expected double-quoted property name in JSON at position 57 (line 8 column 1)
+[2025-04-18T21:03:58.893] [ERROR] error - Error Handler(403): Error: Acceso Denegado
+[2025-04-18T21:07:16.634] [ERROR] error - Error Handler(404): Error: [object Object]
+[2025-04-18T21:07:47.261] [ERROR] error - Error Handler(403): Error: Acceso Denegado
+[2025-04-18T21:10:21.363] [ERROR] error - Error Handler(401): Error: No hay token
+[2025-04-18T21:12:07.678] [FATAL] error - NO EXISTE LA RUTA/user/login
+[2025-04-18T21:12:07.678] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-18T21:13:07.541] [ERROR] error - Error Handler(403): Error: Acceso Denegado

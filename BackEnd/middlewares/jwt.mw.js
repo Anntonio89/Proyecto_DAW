@@ -16,15 +16,16 @@ function extractToken(req){
 
 exports.authenticate = (req,res,next)=>{
     const token = extractToken(req)
+    console.log('TOKEN: ', token)
     if(token){
-        jwt.verify(token, process.env.SECRET_KEY),(err,decoded)=>{
+        jwt.verify(token, process.env.SECRET_KEY,(err,decoded)=>{
             if(err){
                 next (new AppError('Token no válida',401))
             }else{
                 next()
                 //console.log(decoded)
             }
-        }
+        })
     }else{
         next(new AppError('No hay token',401))
     }

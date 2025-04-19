@@ -13,7 +13,7 @@ let User = function(usuario){
     this.peso=usuario.peso
     this.edad=usuario.edad
     this.sexo=usuario.sexo
-    this.rol=usuario.rol || 'Invitado' //Rol por defecto Invitado (no registrado)
+    this.rol=usuario.rol ||'USUARIO'  //('ADMIN','ENTRENADOR','USUARIO'). Rol por defecto Usuario al registrarse
 
 }
 
@@ -100,7 +100,7 @@ User.create = async function(newUser, result){
         }else{
             console.log('Conexión a MySQL abierta')
 
-            newUser.rol='Invitado'//Por defecto siempre será invitado
+            newUser.rol='USUARIO'//Por defecto siempre será usuario
 
             const sql = 'INSERT INTO usuarios SET ?'//SQL para insertar un nuevo usuario
             connection.query(sql, newUser, (err,datos)=>{

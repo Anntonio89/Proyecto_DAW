@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useNavigate,Link} from 'react-router-dom'
 import {login, logout} from '../utils/auth'
 import storage from '../utils/storage'
 
@@ -22,9 +22,10 @@ function Login() {
       e.preventDefault()
       try{
           const res = await login(email, password)
-          navigate('/login')
+          setUserLogued(res.data)
           alert('Bienvenido')
-          setUserLogued(res.data)          
+          navigate('/')     
+          window.location.reload()         
         
         }catch(err){
           if(err.response && err.response.status===401){
@@ -41,6 +42,7 @@ function Login() {
           await logout()
           setUserLogued(null)
           alert('Sesión cerrada con éxito')
+          window.location.reload()      
 
         }catch(err){
           alert('Error al cerrar sesión')
@@ -49,16 +51,21 @@ function Login() {
 
   return (
     <div className='login-Container'>
-        <h1 className='login-Titulo'>Acceder</h1>
         {!userLogued?(
+        <>
+        <h1 className='login-Titulo'>Acceder</h1>
         <form className='login-Form' onSubmit={handleLogin}>
             <input type='email' value={email} onChange={e=>setEmail(e.target.value)} placeholder='Email' required/>
             <input type='password' value={password} onChange={e=>setPassword(e.target.value)} placeholder='Contraseña' required/>
             <button type='submit'>Iniciar Sesión</button>
+            <p>¿No tienes cuenta?<Link to="/users">Regístrate</Link></p>
         </form>
+        </>
         ):(
           <div className='login-Logout'>
-            <p>{userLogued.nombre}</p>
+            <h1 className='login-Titulo'>Mi Perfil</h1>
+            <h3>Usuario:</h3><p>{userLogued.nombre}</p>
+            <h3>Correo:</h3><p>{userLogued.email}</p>
             <button onClick={handleLogout}>Cerrar Sesión</button>
           </div>
         )}

@@ -2,8 +2,7 @@ import axios from 'axios'
 
 export const login = async (email, password)=>{
     try {
-        const res=await axios.post('http://localhost:3015/users/login',{email, password}
-            //, {withCredentials:true}
+        const res=await axios.post('http://localhost:3015/users/login',{email, password}, {withCredentials:true}
         )
     
     if(res.status===200){
@@ -21,8 +20,7 @@ export const login = async (email, password)=>{
 
 export const logout = async ()=>{
     try {
-        await axios.get('http://localhost:3015/users/logout'
-            // , {withCredentials:true}
+        await axios.get('http://localhost:3015/users/logout' , {withCredentials:true}
         )
         localStorage.removeItem('authUser')
         localStorage.removeItem('authToken')

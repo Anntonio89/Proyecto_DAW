@@ -1,5 +1,0 @@
-[2025-04-17T12:42:56.171] [ERROR] error - Error Handler(404): Error: No hay datos del usuario
-[2025-04-17T12:44:14.275] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2025-04-17T12:49:22.944] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2025-04-17T13:25:25.889] [FATAL] error - NO EXISTE LA RUTA/users/logout
-[2025-04-17T13:25:25.890] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA

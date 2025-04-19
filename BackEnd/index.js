@@ -26,22 +26,22 @@ app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:true}))//Permite leer datos (request body) en metodos post
 app.use(express.json())//Para leer datos JSON en req body de POST
 
-//const whitelist=['http://localhost:3015','http://127.0.0.1:3015']
+const whitelist=['http://localhost:3015','http://127.0.0.1:3015','http://localhost:5173','http://127.0.0.1.5173']
 
-// const corsOptions={
-//     origin:(origin,callback)=>{
-//         //Se permite la conexión externa (FrontEnd) y conexiones internas desde el propio API
-//         if(whitelist.includes(origin) || !origin){
-//             callback(null,true)
-//         }else{
-//             callback(new AppError('Conexión no permitida',403))
-//         }
-//     },
-//     credentials:true//Se envia la cookie
-// }
-// app.use(cors(corsOptions))
+const corsOptions={
+    origin:(origin,callback)=>{
+        //Se permite la conexión externa (FrontEnd) y conexiones internas desde el propio API
+        if(whitelist.includes(origin) || !origin){
+            callback(null,true)
+        }else{
+            callback(new AppError('Conexión no permitida',403))
+        }
+    },
+    credentials:true//Se envia la cookie
+}
+app.use(cors(corsOptions))
 
-app.use(cors())//Cors abierto a todo
+// app.use(cors())//Cors abierto a todo
 
 app.use(morganMW.usingMorgan())
 
