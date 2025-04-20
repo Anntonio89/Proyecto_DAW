@@ -18,7 +18,7 @@ function Header() {
     <header className='header'>
         <nav className='nav'>
             <Link to='/'>Inicio</Link>
-            <Link to='/about'>Qué ofrecemos</Link>
+            <Link to='/services'>Qué ofrecemos</Link>
             <Link to='/contact'>Contacto</Link>
             {!userLogued ? <Link to='/login'>Acceder</Link> 
                         : <Link to='/login'>Ver Perfil</Link>

@@ -5,6 +5,8 @@ import Footer from './components/Footer'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Home from './Pages/Home'
+import Services from './Pages/Services'
+import ProtectedRoutes from './components/ProtectedRoutes'
 import './App.css'
 
 function App() {
@@ -15,6 +17,10 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        {/* Rutas protegidas encapsuladas dentro de este Route */}
+        <Route element={<ProtectedRoutes/>}>
+          <Route path='/services' element={<Services/>}/>
+        </Route>
         <Route path="/users" element={<Register/>}/>
         <Route path="/login" element={<Login />} />
       </Routes>

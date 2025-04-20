@@ -1,7 +1,1 @@
-[2025-04-19T09:39:35.532] [ERROR] error - Error Handler(401): Error: No hay token
-[2025-04-19T18:14:13.960] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2025-04-19T18:14:20.019] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2025-04-19T18:14:25.543] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2025-04-19T18:17:46.921] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos
-[2025-04-19T18:17:58.022] [ERROR] error - Error Handler(403): Error: Acceso Denegado
-[2025-04-19T19:37:12.851] [ERROR] error - Error Handler(404): Error: Error al crear el Plan
+[2025-04-20T08:55:06.670] [ERROR] error - Error Handler(401): Error: Usuario y/o contraseña incorrectos

@@ -52,22 +52,22 @@ function Login() {
   return (
     <div className='login-Container'>
         {!userLogued?(
-        <>
-        <h1 className='login-Titulo'>Acceder</h1>
-        <form className='login-Form' onSubmit={handleLogin}>
-            <input type='email' value={email} onChange={e=>setEmail(e.target.value)} placeholder='Email' required/>
-            <input type='password' value={password} onChange={e=>setPassword(e.target.value)} placeholder='Contraseña' required/>
-            <button type='submit'>Iniciar Sesión</button>
-            <p>¿No tienes cuenta?<Link to="/users">Regístrate</Link></p>
-        </form>
-        </>
-        ):(
-          <div className='login-Logout'>
-            <h1 className='login-Titulo'>Mi Perfil</h1>
-            <h3>Usuario:</h3><p>{userLogued.nombre}</p>
-            <h3>Correo:</h3><p>{userLogued.email}</p>
-            <button onClick={handleLogout}>Cerrar Sesión</button>
+          <div>
+            <h1 className='login-Titulo'>Acceder</h1>
+            <form className='login-Form' onSubmit={handleLogin}>
+                <input type='email' value={email} onChange={e=>setEmail(e.target.value)} placeholder='Email' required/>
+                <input type='password' value={password} onChange={e=>setPassword(e.target.value)} placeholder='Contraseña' required/>
+                <button type='submit'>Iniciar Sesión</button>
+                <p>¿No tienes cuenta?<Link to="/users">Regístrate</Link></p>
+            </form>
           </div>
+          ):(
+            <div className='login-Logout'>
+              <h1 className='login-Titulo'>Mi Perfil</h1>
+              <h3>Usuario:</h3><p>{userLogued.nombre}</p>
+              <h3>Correo:</h3><p>{userLogued.email}</p>
+              <button onClick={handleLogout}>Cerrar Sesión</button>
+            </div>
         )}
     </div>
   )

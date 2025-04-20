@@ -116,9 +116,9 @@ nav.nav{
     position: relative;
     min-height: 80vh;
 }
-.login-Container h1{
+.login-Container h1, .register-Container h1{
     font-size: 70px;
-    font-style: bold;
+    font-style: italic;
 }
 .login-Titulo, .register-Titulo{
     font-weight: bold;
@@ -158,4 +158,26 @@ nav.nav{
 .register-Container select{
     background-color: black;
     color:#d1006a;
+}
+
+.services{
+    background-color: black;
+    color:#d1006a;
+    height: 75vh;
+}
+
+.services .row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services h1{
+    font-style: italic;
+}
+.custom-img{
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
 }

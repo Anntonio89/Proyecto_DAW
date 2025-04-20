@@ -51,8 +51,9 @@ app.use(session({
     resave:false,
     saveUninitialized:false,
     cookie:{
-        maxage:3600000,
-        sameSite:"none"
+        maxAge:3600000,
+        sameSite:"none",
+        secure:false
     }
 }))
 
