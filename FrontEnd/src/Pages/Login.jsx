@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react'
 import {useNavigate,Link} from 'react-router-dom'
 import {login, logout} from '../utils/auth'
 import storage from '../utils/storage'
+import Swal from 'sweetalert2'
 
 function Login() {
 
@@ -23,15 +24,36 @@ function Login() {
       try{
           const res = await login(email, password)
           setUserLogued(res.data)
-          alert('Bienvenido')
+          Swal.fire({
+                    title:'Bienvenido',
+                    text:'Login correcto',
+                    icon:'success',
+                    background:'black',
+                    confirmButtonColor: '#d1006a',
+                    confirmButtonText:'Volver'
+                  })
           navigate('/')     
           window.location.reload()         
         
         }catch(err){
           if(err.response && err.response.status===401){
-            alert('Contraseña y/o usuario incorrecto')
+            Swal.fire({
+                title:'Error',
+                text:'Contraseña y/o usuario incorrecto',
+                icon:'error',
+                background:'black',
+                confirmButtonColor: '#d1006a',
+                confirmButtonText:'Volver'
+            })
           }else{
-            alert('Error al iniciar sesión')
+            Swal.fire({
+                title:'Error',
+                text:'Error al iniciar sesión',
+                icon:'error',
+                background:'black',
+                confirmButtonColor: '#d1006a',
+                confirmButtonText:'Volver'
+            })  
           }
       }
     }
@@ -41,11 +63,25 @@ function Login() {
       try{
           await logout()
           setUserLogued(null)
-          alert('Sesión cerrada con éxito')
-          window.location.reload()      
+          Swal.fire({
+              title:'Sesión cerrada',
+              text:'Sesión cerrada con éxito',
+              icon:'success',
+              background:'black',
+              confirmButtonColor: '#d1006a',
+              confirmButtonText:'Volver'
+          })
+          navigate('/login')    
 
         }catch(err){
-          alert('Error al cerrar sesión')
+          Swal.fire({
+              title:'Error',
+              text:'Error al cerrar sesión',
+              icon:'error',
+              background:'black',
+              confirmButtonColor: '#d1006a',
+              confirmButtonText:'Volver'
+          }) 
         }
       }    
 
@@ -66,6 +102,13 @@ function Login() {
               <h1 className='login-Titulo'>Mi Perfil</h1>
               <h3>Usuario:</h3><p>{userLogued.nombre}</p>
               <h3>Correo:</h3><p>{userLogued.email}</p>
+              <Link to='/progres' className='user-Progres' 
+                  style={{color:'#d1006a',
+                          textDecoration:'none',
+                          fontWeight:'bold',
+                        }}>
+                  Ver Progreso
+              </Link>
               <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
         )}

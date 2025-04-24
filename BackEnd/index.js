@@ -25,6 +25,8 @@ const cors=require('cors')
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({extended:true}))//Permite leer datos (request body) en metodos post
 app.use(express.json())//Para leer datos JSON en req body de POST
+app.use(express.static(path.join(__dirname, 'public'))) //Archivos estáticos desde la carpeta 'public'
+
 
 const whitelist=['http://localhost:3015','http://127.0.0.1:3015','http://localhost:5173','http://127.0.0.1.5173']
 

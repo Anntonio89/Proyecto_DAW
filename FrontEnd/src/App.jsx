@@ -7,6 +7,8 @@ import Register from './Pages/Register'
 import Home from './Pages/Home'
 import Services from './Pages/Services'
 import ProtectedRoutes from './components/ProtectedRoutes'
+import ExercicesFun from './Pages/ExercicesFun'
+import CreateProgres from './Pages/Progres/CreateProgres'
 import './App.css'
 
 function App() {
@@ -17,9 +19,11 @@ function App() {
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/services' element={<Services/>}/>
         {/* Rutas protegidas encapsuladas dentro de este Route */}
         <Route element={<ProtectedRoutes/>}>
-          <Route path='/services' element={<Services/>}/>
+          <Route path='/exercice' element={<ExercicesFun/>}/>
+          <Route path='/progres' element={<CreateProgres/>}/>
         </Route>
         <Route path="/users" element={<Register/>}/>
         <Route path="/login" element={<Login />} />

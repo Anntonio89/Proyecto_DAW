@@ -1,6 +1,7 @@
 import React from 'react'
 import storage from '../utils/storage'
 import { Navigate, useLocation, Outlet } from 'react-router-dom'
+import Swal from 'sweetalert2'
 
 function ProtectedRoutes() {
 
@@ -10,9 +11,22 @@ function ProtectedRoutes() {
     if(!authUser){//En caso de no haber usuario autenticado, se redirige a la pagina de login
         return <Navigate to="/login"/>
     }
-    if(authUser.rol==='USUARIO' && location.pathname ==='/services'){
-        alert('Acceso Denegado')
-        return <Navigate to='/'/>
+    if(authUser.rol==='USUARIO' && location.pathname ==='/exercice'){
+        Swal.fire({
+            title:'Acceso Denegado',
+            text:'Sin permisos de acceso a esta sección',
+            icon:'error',
+            background:'black',
+            confirmButtonColor: '#d1006a',
+            confirmButtonText:'Volver',
+            showClass:{
+              popup:''
+            },
+            hideClass:{
+              popup:''
+            }
+        })
+        return <Navigate to='/services'/>
         
     }
   return (

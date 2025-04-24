@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 import storage from '../utils/storage'
 
 function Header() {
@@ -17,11 +17,11 @@ function Header() {
     <>
     <header className='header'>
         <nav className='nav'>
-            <Link to='/'>Inicio</Link>
-            <Link to='/services'>Qué ofrecemos</Link>
-            <Link to='/contact'>Contacto</Link>
-            {!userLogued ? <Link to='/login'>Acceder</Link> 
-                        : <Link to='/login'>Ver Perfil</Link>
+            <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : '')}>Inicio</NavLink>
+            <NavLink to='/services' className={({ isActive }) => (isActive ? 'active' : '')}>Qué ofrecemos</NavLink>
+            <NavLink to='/contact'className={({ isActive }) => (isActive ? 'active' : '')}>Contacto</NavLink>
+            {!userLogued ? <NavLink to='/login'className={({ isActive }) => (isActive ? 'active' : '')}>Acceder</NavLink> 
+                        : <NavLink to='/login'className={({ isActive }) => (isActive ? 'active' : '')}>Ver Perfil</NavLink>
             }
         </nav>
         <div className='busqueda'>
