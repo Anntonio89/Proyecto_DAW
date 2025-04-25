@@ -1,1 +1,336 @@
-[2025-04-24T12:45:07.988] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T10:16:49.266] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:32:01.596] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:32:17.837] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:11:32:28 +0000] "GET /exercice HTTP/1.1" 200 423 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:32:50 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:32:54 +0000] "GET /exercice/1 HTTP/1.1" 200 189 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:33:04 +0000] "PUT /exercice/9 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:33:07 +0000] "GET /exercice/9 HTTP/1.1" 200 189 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:33:16 +0000] "POST /exercice HTTP/1.1" 201 177 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:33:32 +0000] "GET /exercice HTTP/1.1" 200 743 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:34:01 +0000] "PUT /exercice/10 HTTP/1.1" 400 52 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:34:08 +0000] "PUT /exercice/10 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:34:12 +0000] "GET /exercice/10 HTTP/1.1" 200 190 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:34:16 +0000] "GET /exercice HTTP/1.1" 200 754 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:34:16 +0000] "GET /exercice HTTP/1.1" 200 754 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:27 +0000] "GET /exercice/1 HTTP/1.1" 200 189 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:27 +0000] "GET /exercice/1 HTTP/1.1" 200 189 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:32 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:36 +0000] "GET /exercice HTTP/1.1" 200 732 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:36 +0000] "GET /exercice HTTP/1.1" 200 732 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:36 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:40 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:40 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:40 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:48 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:58 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:59 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:59 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:59 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:59 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:35:59 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:00 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:10 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:10 +0000] "GET /exercice HTTP/1.1" 200 732 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:10 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:11 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:11 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:11 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:14 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:14 +0000] "GET /exercice HTTP/1.1" 200 732 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:14 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:15 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:15 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:15 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:18 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:18 +0000] "GET /exercice HTTP/1.1" 200 732 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:18 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:19 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:19 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:36:19 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+[2025-04-25T13:37:11.017] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:37:12.483] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:38:47.651] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:39:20.751] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:39:23.293] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:39:37.352] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:39:46.254] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:39:56.450] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:41:01.617] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:11:41:08 +0000] "POST /exercice HTTP/1.1" 201 188 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:41:15 +0000] "GET /exercice/11 HTTP/1.1" 200 190 "-" "insomnia/10.3.0"
+[2025-04-25T13:41:33.426] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:41:37.241] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:41:38.797] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:41:51.144] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:41:54.610] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:41:56.774] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:12 +0000] "PUT /exercice/11 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:21 +0000] "PUT /exercice/11 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:27 +0000] "PUT /exercice/11 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:30 +0000] "GET /exercice/11 HTTP/1.1" 200 171 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:38 +0000] "PUT /exercice/11 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:40 +0000] "GET /exercice/11 HTTP/1.1" 200 160 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:47 +0000] "PUT /exercice/11 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:42:51 +0000] "GET /exercice/11 HTTP/1.1" 200 171 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:43:36 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:09 +0000] "GET /exercice HTTP/1.1" 200 902 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:09 +0000] "GET /exercice HTTP/1.1" 200 902 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:09 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:11 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:11 +0000] "GET /exercice/1 HTTP/1.1" 200 167 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:11 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:16 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:19 +0000] "GET /exercice HTTP/1.1" 200 895 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:19 +0000] "GET /exercice HTTP/1.1" 200 895 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:19 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:20 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:20 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:20 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:23 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:23 +0000] "GET /exercice HTTP/1.1" 200 895 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:23 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:26 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:27 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:27 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:31 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:42 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:42 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:42 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:44 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:44 +0000] "GET /exercice HTTP/1.1" 200 895 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:44 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:46 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:46 +0000] "GET /exercice HTTP/1.1" 200 895 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:46 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:47 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:47 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:47 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:44:53 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:12 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:12 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:12 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:16 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:16 +0000] "GET /exercice HTTP/1.1" 200 895 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:16 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:23 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:23 +0000] "GET /exercice/1 HTTP/1.1" 200 160 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:23 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:45:28 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:46:53 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:46:58 +0000] "GET /exercice HTTP/1.1" 200 905 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:46:58 +0000] "GET /exercice HTTP/1.1" 200 905 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:47:03 +0000] "DELETE /exercice/11 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+[2025-04-25T13:49:36.899] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:49:42.061] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:50:40.485] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:50:46.997] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:51:52.966] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:51:56.356] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:52:05.026] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:54:15.725] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:54:50.401] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:54:55.325] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T13:55:16.679] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:11:55:24 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:55:24 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:55:29 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:55:33 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:55:33 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:55:33 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:35 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:35 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:35 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:37 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:40 +0000] "GET /exercice HTTP/1.1" 200 735 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:40 +0000] "GET /exercice HTTP/1.1" 200 735 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:43 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:43 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:46 +0000] "PUT /exercice/1 HTTP/1.1" 200 228 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:50 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:50 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:50 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:55 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:55 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:55 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:11:58:59 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+[2025-04-25T14:03:02.557] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:03:03.607] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:04:28.214] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:35 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:36 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:40 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:40 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:40 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:40 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:04:47 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+[2025-04-25T14:05:22.620] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:00.734] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:02.336] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:04.973] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:10.650] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:13.037] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:19.690] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:22.027] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:26.853] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:30.663] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:06:38.013] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:21.267] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:34.287] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:41.223] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:44.260] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:49.602] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:57.291] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:08:59.738] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:09:11.399] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:09:15.468] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:09:20.067] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:09:27.258] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:09:40.475] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:09:48.545] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:10:01.310] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:10:12.140] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:12:10:25 +0000] "GET /exercice HTTP/1.1" 200 724 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:10:37 +0000] "POST /exercice HTTP/1.1" 201 169 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:10:40 +0000] "GET /exercice HTTP/1.1" 200 894 "-" "insomnia/10.3.0"
+[2025-04-25T14:11:45.716] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:12:12:27 +0000] "PUT /exercice/12 HTTP/1.1" 200 227 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:12:31 +0000] "GET /exercice/12 HTTP/1.1" 200 160 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:12:38 +0000] "PUT /exercice/12 HTTP/1.1" 200 227 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:12:45 +0000] "GET /exercice/12 HTTP/1.1" 200 171 "-" "insomnia/10.3.0"
+[2025-04-25T14:13:24.276] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:13:52.302] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:13:54.951] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:14:02.228] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:14:04.105] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:14:05.422] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:14:07.420] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:14:09.426] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:18 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:18 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:18 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:31 +0000] "GET /exercice HTTP/1.1" 200 894 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:31 +0000] "GET /exercice HTTP/1.1" 200 894 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:31 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:35 +0000] "DELETE /exercice/12 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:39 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:39 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:40 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:14:49 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:27 +0000] "GET /exercice/1 HTTP/1.1" 200 159 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:31 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:34 +0000] "GET /exercice HTTP/1.1" 200 735 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:34 +0000] "GET /exercice HTTP/1.1" 200 735 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:36 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:36 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:38 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:42 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:42 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:15:42 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+[2025-04-25T14:15:57.538] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:01 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:01 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:01 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:04 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:09 +0000] "GET /exercice HTTP/1.1" 200 735 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:09 +0000] "GET /exercice HTTP/1.1" 200 735 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:10 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:10 +0000] "GET /exercice/1 HTTP/1.1" 200 170 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:11 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:14 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:14 +0000] "GET /exercice HTTP/1.1" 200 724 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:14 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:37 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:16:40 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:17:54 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:17:54 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:04 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:04 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:06 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:06 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:08 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:11 +0000] "GET /exercice HTTP/1.1" 200 742 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:11 +0000] "GET /exercice HTTP/1.1" 200 742 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:11 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:12 +0000] "GET /exercice/1 HTTP/1.1" 200 177 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:12 +0000] "GET /exercice/1 HTTP/1.1" 200 177 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:12 +0000] "GET /img_uploaded/null HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:34 +0000] "PUT /exercice/1 HTTP/1.1" 500 26 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:48 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "-" "insomnia/10.3.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:51 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:51 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:53 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:53 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:55 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:18:55 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:19:53 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:01 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:01 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:03 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:03 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:04 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:09 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:09 +0000] "GET /exercice HTTP/1.1" 200 753 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:11 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:11 +0000] "GET /exercice/1 HTTP/1.1" 200 188 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:18 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:21 +0000] "GET /exercice HTTP/1.1" 200 736 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:21 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:22 +0000] "GET /exercice/1 HTTP/1.1" 200 171 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:22 +0000] "GET /exercice/1 HTTP/1.1" 200 171 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:35 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:38 +0000] "GET /exercice HTTP/1.1" 200 747 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:38 +0000] "GET /exercice HTTP/1.1" 200 747 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:50 +0000] "GET /exercice/1 HTTP/1.1" 200 182 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:20:50 +0000] "GET /exercice/1 HTTP/1.1" 200 182 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:12 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:16 +0000] "GET /exercice HTTP/1.1" 200 747 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:16 +0000] "GET /exercice HTTP/1.1" 200 747 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:17 +0000] "GET /exercice/1 HTTP/1.1" 200 182 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:17 +0000] "GET /exercice/1 HTTP/1.1" 200 182 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:25 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:28 +0000] "GET /exercice HTTP/1.1" 200 747 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:21:28 +0000] "GET /exercice HTTP/1.1" 200 747 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:31 +0000] "GET /exercice/1 HTTP/1.1" 200 182 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:31 +0000] "GET /exercice/1 HTTP/1.1" 200 182 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:38 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:41 +0000] "GET /exercice HTTP/1.1" 200 739 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:41 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:42 +0000] "GET /exercice/1 HTTP/1.1" 200 174 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:23:42 +0000] "GET /exercice/1 HTTP/1.1" 200 174 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:24:05 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:24:08 +0000] "GET /exercice HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:24:08 +0000] "GET /exercice HTTP/1.1" 200 739 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+[2025-04-25T14:28:57.884] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:28:59.910] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:29:02.479] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+[2025-04-25T14:29:11.878] [INFO] access - Servidor corriendo en:  http://localhost:3015/users
+::ffff:127.0.0.1 - - [25/Apr/2025:12:42:51 +0000] "POST /users HTTP/1.1" 201 195 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:28 +0000] "GET /exercice HTTP/1.1" 200 739 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:28 +0000] "GET /exercice HTTP/1.1" 200 739 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:29 +0000] "GET /exercice/1 HTTP/1.1" 200 174 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:29 +0000] "GET /exercice/1 HTTP/1.1" 200 174 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:40 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:43 +0000] "GET /exercice HTTP/1.1" 200 746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:43 +0000] "GET /exercice HTTP/1.1" 200 746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:45 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:48:45 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:50:15 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:52:02 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:52:08 +0000] "PUT /exercice/1 HTTP/1.1" 200 227 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:52:12 +0000] "GET /exercice HTTP/1.1" 200 746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:52:12 +0000] "GET /exercice HTTP/1.1" 200 746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:52:13 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:52:13 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:12:53:09 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:41 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:41 +0000] "GET /img_uploaded/imagen-1745585528662.jpg HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:44 +0000] "GET /exercice HTTP/1.1" 200 746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:44 +0000] "GET /exercice HTTP/1.1" 200 746 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:45 +0000] "GET /img_uploaded/imagen-1745585528662.jpg HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:46 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:46 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:25:46 +0000] "GET /img_uploaded/imagen-1745585528662.jpg HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:28:26 +0000] "GET /exercice/1 HTTP/1.1" 304 - "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:28:26 +0000] "GET /exercice/1 HTTP/1.1" 200 181 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"
+::ffff:127.0.0.1 - - [25/Apr/2025:14:28:26 +0000] "GET /img_uploaded/imagen-1745585528662.jpg HTTP/1.1" 404 27 "http://localhost:5173/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:137.0) Gecko/20100101 Firefox/137.0"

@@ -102,7 +102,7 @@ function Login() {
               <h1 className='login-Titulo'>Mi Perfil</h1>
               <h3>Usuario:</h3><p>{userLogued.nombre}</p>
               <h3>Correo:</h3><p>{userLogued.email}</p>
-              <Link to='/progres' className='user-Progres' 
+              <Link to='/details-progres' className='user-Progres' 
                   style={{color:'#d1006a',
                           textDecoration:'none',
                           fontWeight:'bold',

@@ -13,7 +13,7 @@ function Services() {
                   </NavLink>
                 </div>
                 <div className='col-md-4 text-center mb-4'>
-                  <NavLink to='/exercice' className={({ isActive }) => (isActive ? 'active' : '')}>
+                  <NavLink to='/exerciceFun' className={({ isActive }) => (isActive ? 'active' : '')}>
                     <img src='/4.jpeg' className='img-fluid custom-img'/>
                     <h5 style={{ fontFamily: 'Open Sans, sans-serif', color: '#d1006a' }}>EJERCICIOS FUNCIONALES</h5>
                   </NavLink>

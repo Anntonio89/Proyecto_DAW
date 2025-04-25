@@ -1,17 +1,108 @@
-[2025-04-24T13:47:16.261] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:47:42.621] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:47:45.148] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:47:45.155] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:49:44.203] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:49:52.410] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:49:52.414] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:50:41.752] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:50:43.325] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:50:43.329] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:50:46.671] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:50:46.675] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:51:11.333] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:52:44.836] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:52:50.031] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:52:50.036] [ERROR] error - Error Handler(404): Error: [object Object]
-[2025-04-24T13:53:05.955] [ERROR] error - Error Handler(404): Error: [object Object]
+[2025-04-25T12:58:38.106] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T12:58:38.123] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T12:59:08.506] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T12:59:08.507] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:14:11.825] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:14:14.507] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:14:15.917] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:14:16.237] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:14:16.461] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:24:18.315] [ERROR] error - Error Handler(404): Error: [object Object]
+[2025-04-25T13:27:03.387] [ERROR] error - Error Handler(500): Error: data and salt arguments required
+[2025-04-25T13:29:58.393] [ERROR] error - Error Handler(401): Error: No hay token
+[2025-04-25T13:34:01.645] [ERROR] error - Error Handler(400): Error: No se proporcionaron datos para actualizar
+[2025-04-25T13:35:36.098] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:35:36.098] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:35:40.397] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:35:40.398] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:35:48.569] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:35:58.668] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:35:59.120] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:35:59.408] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:35:59.616] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:35:59.796] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:35:59.991] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:36:00.148] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:36:10.495] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:36:10.496] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:36:11.910] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:36:11.911] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:36:14.641] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:36:14.641] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:36:15.708] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:36:15.708] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:36:18.274] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:36:18.275] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:36:19.433] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:36:19.433] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:43:36.577] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:44:09.299] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:09.299] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:11.208] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:11.209] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:19.594] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:19.595] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:20.658] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:20.658] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:23.489] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:23.490] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:27.003] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:27.004] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:31.914] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:44:42.297] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:42.297] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:44.209] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:44.210] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:46.667] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:46.668] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:47.669] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:44:47.670] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:44:53.537] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:45:12.563] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:45:12.563] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:45:16.372] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:45:16.373] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:45:23.329] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:45:23.330] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:45:28.129] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T13:55:33.464] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:55:33.465] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:58:35.457] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:58:35.457] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:58:50.494] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:58:50.494] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:58:55.430] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T13:58:55.431] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T13:58:59.688] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T14:04:35.273] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T14:04:36.966] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T14:04:40.026] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T14:04:40.869] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:04:40.869] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:04:47.767] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T14:14:18.081] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:14:18.081] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:14:31.670] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:14:31.671] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:14:39.999] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:14:40.000] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:14:49.427] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T14:15:42.141] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:15:42.141] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:16:01.479] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:16:01.479] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:16:14.867] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:16:14.868] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:18:11.808] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:18:11.809] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:18:12.830] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/null
+[2025-04-25T14:18:12.830] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T14:18:34.107] [ERROR] error - Error Handler(500): MulterError: Unexpected field
+[2025-04-25T16:25:41.734] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/imagen-1745585528662.jpg
+[2025-04-25T16:25:41.736] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T16:25:45.006] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/imagen-1745585528662.jpg
+[2025-04-25T16:25:45.007] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T16:25:46.372] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/imagen-1745585528662.jpg
+[2025-04-25T16:25:46.373] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA
+[2025-04-25T16:28:26.401] [FATAL] error - NO EXISTE LA RUTA/img_uploaded/imagen-1745585528662.jpg
+[2025-04-25T16:28:26.401] [ERROR] error - Error Handler(404): Error: NO EXISTE LA RUTA

@@ -31,7 +31,15 @@ exports.createExercice=wrapAsync(async function(req,res,next){
 
     const imagen = req.file ? req.file.filename : null//Se verifica si hay imagen ya cargada
 
-    const newExercice= new exerciceModel({...req.body, imagen})
+    //Se crean los ejercicios con los campos del body y la imagen
+    const newExercice= new exerciceModel({
+        nombre:req.body.nombre,
+        categoria:req.body.categoria,
+        grupo_muscular: req.body.grupo_muscular,
+        nivel:req.body.nivel,
+        descripcion:req.body.descripcion,
+        imagen:req.body.imagen
+    })
 
     await exerciceModel.create(newExercice, function(err, datosEjercicioCreado){
         if(err){
@@ -48,7 +56,14 @@ exports.updateExercice=wrapAsync(async function (req,res,next){
 
     const imagen = req.file ? req.file.filename : req.body.imagen || null//Si ya hay imagen, se emplea, si no se usa el que se envia desde el body o si no null.
     //Se permite actualizar la imagen del ejercicio
-    const updateExer={ ...req.boy, imagen}
+    const updateExer={ 
+        nombre:req.body.nombre|| null,
+        categoria:req.body.categoria|| null,
+        grupo_muscular: req.body.grupo_muscular|| null,
+        nivel:req.body.nivel|| null,
+        descripcion:req.body.descripcion|| null,
+        imagen:req.body.imagen || imagen
+    }
 
     const updateExercice = new exerciceModel(updateExer)
 
