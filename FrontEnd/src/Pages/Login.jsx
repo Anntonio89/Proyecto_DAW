@@ -98,10 +98,11 @@ function Login() {
             </form>
           </div>
           ):(
+            <>
+            <h1 className='login-Titulo'>Mi Perfil</h1>
             <div className='login-Logout'>
-              <h1 className='login-Titulo'>Mi Perfil</h1>
-              <h3>Usuario:</h3><p>{userLogued.nombre}</p>
-              <h3>Correo:</h3><p>{userLogued.email}</p>
+              <h3><strong>Usuario:</strong></h3><p>{userLogued.nombre}</p>
+              <h3><strong>Correo:</strong></h3><p>{userLogued.email}</p>
               <Link to='/details-progres' className='user-Progres' 
                   style={{color:'#d1006a',
                           textDecoration:'none',
@@ -111,6 +112,7 @@ function Login() {
               </Link>
               <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
+            </>
         )}
     </div>
   )

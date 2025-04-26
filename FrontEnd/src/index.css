@@ -371,7 +371,7 @@ nav.nav{
     gap:1rem;
 }
 
-.login-Container, .register-Container, .home-Container, .progres-Container, .progres-details-Container, .exer-details-Container{
+.login-Container, .register-Container, .home-Container, .progres-Container, .progres-details-Container, .exer-details-Container, .exerciceEdit-Container{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -388,7 +388,7 @@ nav.nav{
     position: relative;
     min-height: 80vh;
 }
-.register-Container, .progres-Container, .progres-details-Container, .exer-details-Container{
+.register-Container, .progres-Container, .progres-details-Container, .exer-details-Container, .exerciceEdit-Container{
     background-image: url('/2.jpeg');
     background-size: cover;
     background-position: center;
@@ -406,7 +406,7 @@ nav.nav{
     color: #d1006a;
 
 }
-.login-Titulo, .register-Titulo, .progres-Titulo{
+.login-Titulo, .register-Titulo, .progres-Titulo, .exerciceEdit-Titulo{
     font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -414,23 +414,23 @@ nav.nav{
     text-transform: uppercase;
 }
 
-.login-Form, .register-Form, .progres-Form{
+.login-Form, .register-Form, .progres-Form, .exerciceEdit-Form{
     display: flex;
     flex-direction: column;
     gap:1rem;
 }
 
-.login-Form input, .register-Form input, .register-Container select, .progres-Form input{
+.login-Form input, .register-Form input, .register-Container select, .progres-Form input, .exerciceEdit-Form input, .exerciceEdit-Form-textarea{
     padding:0.8rem;
     border-radius:1.5rem;
     font-size: 1rem;
     text-align: left;
 }
-.login-Form input:focus, .register-Form input:focus, .progres-Form input:focus{
-    border-color: #d1006a;    
+.login-Form input:focus, .register-Form input:focus, .progres-Form input:focus, .exerciceEdit-Form input:focus, .exerciceEdit-Form-textarea:focus{
+    border-color: #d1006a !important;
 }
 
-.home-Container button, .login-Container button, .register-Container button, .progres-Container button{
+.home-Container button, .login-Container button, .register-Container button, .progres-Container button, .exerciceEdit-Container button{
     background-color: #d1006a;
     color:black;
     padding: 0.8rem;
@@ -442,7 +442,7 @@ nav.nav{
 
 }
 
-.home-Container button:hover, .login-Container button:hover, .register-Container button:hover, .progres-Container button:hover{
+.home-Container button:hover, .login-Container button:hover, .register-Container button:hover, .progres-Container button:hover, .exerciceEdit-Container button:hover{
     background-color: black;
     color:#d1006a;  
     border-color: #d1006a;
@@ -544,16 +544,15 @@ nav.nav{
 
 .user-Progres{
     display: block;
-    padding: 0.8rem;
-    
+    padding: 0.8rem;    
 }
 
 .user-Progres:hover{
-    font-size: 0.9rem;
+    font-size: 1.5rem;
     color:white !important;
 }
 
-.progres-details-Card, .exer-details-Card{
+.progres-details-Card, .exer-details-Card, .login-Logout{
     background-color:rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     padding: 2rem;
@@ -561,9 +560,12 @@ nav.nav{
     box-shadow: 0 2px 4px black;
     font-size: 1.5rem;
     color:black;
-    text-align: justify;
+    text-align: center;
 }
-
+.exer-details-Card img{
+    border: 2px solid #d1006a;
+    border-radius: 10px;
+}
 .btn-custom-edit,
 .btn-custom-delete {
     padding: 6px 12px;

@@ -14,6 +14,8 @@ import DetailsProgres from './Pages/Progres/DetailsProgres'
 import ExerciceList from './Pages/Exercices/ExerciceList'
 import DetailsExercice from './Pages/Exercices/DetailsExercice'
 import EditExercice from './Pages/Exercices/EditExercice'
+import UsersList from './Pages/Users/UsersList'
+import EditUser from './Pages/Users/EditUsers'
 
 function App() {
 
@@ -27,6 +29,8 @@ function App() {
         <Route path='/exercice' element={<ExerciceList/>}/>
         <Route path='/exerciceDetail/:id' element={<DetailsExercice/>}/>
         <Route path='/exerciceEdit/:id' element={<EditExercice/>}/>
+        <Route path='/usersList' element={<UsersList/>}/>
+        <Route path='/userEdit/:id' element={<EditUser/>}/>
         {/* Rutas protegidas encapsuladas dentro de este Route */}
         {/* <Route element={<ProtectedRoutes/>}> */}
           <Route path='/exerciceFun' element={<ExercicesFun/>}/>
