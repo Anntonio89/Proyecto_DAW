@@ -36,8 +36,10 @@ NO PUEDE:
 
 exports.requireCoach=(req,res,next)=>{
     if(checkProfile(req,'ENTRENADOR') || checkProfile(req,'ADMIN')){
+        //console.log(res)
         next()
     }else{
+        //console.log(res)
         next(new AppError('Acceso Denegado',403))
     }
 }

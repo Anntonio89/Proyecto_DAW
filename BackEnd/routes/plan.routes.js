@@ -10,5 +10,10 @@ router.get('/:id', jwtMW.authenticate, rutasProtegidasMW.requireCoach, planContr
 router.post('/',jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.createPlan)
 router.put('/:id',jwtMW.authenticate, rutasProtegidasMW.requireCoach,planController.updatePlan)
 router.delete('/:id',jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.deletePlan)
+// router.get('/', planController.findAllPlans)
+// router.get('/:id', planController.findPlanById)
+// router.post('/', planController.createPlan)
+// router.put('/:id', planController.updatePlan)
+// router.delete('/:id', planController.deletePlan)
 
 module.exports=router

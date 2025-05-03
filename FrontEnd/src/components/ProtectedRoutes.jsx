@@ -11,7 +11,7 @@ function ProtectedRoutes() {
     if(!authUser){//En caso de no haber usuario autenticado, se redirige a la pagina de login
         return <Navigate to="/login"/>
     }
-    if(authUser.rol==='USUARIO' && location.pathname ==='/exercice'){
+    if(authUser.rol==='USUARIO' && location.pathname ==='/services'){
         Swal.fire({
             title:'Acceso Denegado',
             text:'Sin permisos de acceso a esta sección',
@@ -26,7 +26,7 @@ function ProtectedRoutes() {
               popup:''
             }
         })
-        return <Navigate to='/services'/>
+        return <Navigate to='/'/>
         
     }
   return (

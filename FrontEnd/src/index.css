@@ -371,7 +371,7 @@ nav.nav{
     gap:1rem;
 }
 
-.login-Container, .register-Container, .home-Container, .progres-Container, .progres-details-Container, .exer-details-Container, .exerciceEdit-Container{
+.login-Container, .register-Container, .home-Container, .progres-Container, .progres-details-Container, .exer-details-Container, .exerciceEdit-Container, .progresEdit-Container{
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -388,14 +388,23 @@ nav.nav{
     position: relative;
     min-height: 80vh;
 }
-.register-Container, .progres-Container, .progres-details-Container, .exer-details-Container, .exerciceEdit-Container{
+.register-Container, .progres-Container, .progres-details-Container, .exer-details-Container, .exerciceEdit-Container , .progresEdit-Container{
     background-image: url('/2.jpeg');
     background-size: cover;
     background-position: center;
     position: relative;
     min-height: 80vh;
 }
-.login-Container h1, .register-Container h1, .progres-Container h1, .progres-details-Container h1{
+
+.exercice-Rut-Container{
+    background-image: url('/5.jpeg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 80vh;
+}
+
+.login-Container h1, .register-Container h1, .progres-Container h1, .progres-details-Container h1, .progresEdit-Container h1, .exercice-Rut-Container h1{
     font-size: 70px;
     font-style: italic;
 }
@@ -406,7 +415,7 @@ nav.nav{
     color: #d1006a;
 
 }
-.login-Titulo, .register-Titulo, .progres-Titulo, .exerciceEdit-Titulo{
+.login-Titulo, .register-Titulo, .progres-Titulo, .exerciceEdit-Titulo, .progresEdit-Titulo, .exer-Rut-Edit-Titulo{
     font-weight: bold;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
@@ -414,13 +423,13 @@ nav.nav{
     text-transform: uppercase;
 }
 
-.login-Form, .register-Form, .progres-Form, .exerciceEdit-Form{
+.login-Form, .register-Form, .progres-Form, .exerciceEdit-Form, .progresEdit-Form{
     display: flex;
     flex-direction: column;
     gap:1rem;
 }
 
-.login-Form input, .register-Form input, .register-Container select, .progres-Form input, .exerciceEdit-Form input, .exerciceEdit-Form-textarea{
+.login-Form input, .register-Form input, .register-Container select, .progres-Form input, .exerciceEdit-Form input, .exerciceEdit-Form-textarea, .progresEdit-Form input{
     padding:0.8rem;
     border-radius:1.5rem;
     font-size: 1rem;
@@ -430,7 +439,7 @@ nav.nav{
     border-color: #d1006a !important;
 }
 
-.home-Container button, .login-Container button, .register-Container button, .progres-Container button, .exerciceEdit-Container button{
+.home-Container button, .login-Container button, .register-Container button, .progres-Container button, .exerciceEdit-Container button, .progresEdit-Container button{
     background-color: #d1006a;
     color:black;
     padding: 0.8rem;
@@ -442,7 +451,7 @@ nav.nav{
 
 }
 
-.home-Container button:hover, .login-Container button:hover, .register-Container button:hover, .progres-Container button:hover, .exerciceEdit-Container button:hover{
+.home-Container button:hover, .login-Container button:hover, .register-Container button:hover, .progres-Container button:hover, .exerciceEdit-Container button:hover, .progresEdit-Container button:hover{
     background-color: black;
     color:#d1006a;  
     border-color: #d1006a;
@@ -584,7 +593,7 @@ nav.nav{
     border-radius: 0.5rem;
 }
 
-.btn-custom-edit:hover {
+.btn-custom-edit:hover, .btn-custom-ex-Rut:hover {
     background-color: #d1006a;
     color: black;
 }
@@ -601,6 +610,17 @@ nav.nav{
     background-color: black;
     color: #d1006a;
     border-color: #d1006a;
+}
+
+.btn-custom-ex-Rut{
+    background-color: black;
+    color: #d1006a;
+    border:2px solid black;
+    border-color: black;
+    border-radius: 0.5rem;
+    width: 200px;
+    font-size: 24px;
+
 }
 
 .img-hover-shrink {

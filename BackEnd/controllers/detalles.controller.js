@@ -32,7 +32,11 @@ exports.createDetail=wrapAsync(async function(req,res,next){
 
     await detailModel.create(newDetail, function(err, datosDetalleCreado){
         if(err){
-            next(new AppError('Error al crear el Detalle',404))
+            if(err.code === 'ER_DUP_ENTRY'){
+                next(new AppError('El detalle ya existe con ese plan y ejercicio', 409))//409 Conflicto
+            }else{
+                next(new AppError('Error al crear el Detalle',500))
+            }
         }else{
             res.status(201).json(datosDetalleCreado)
         }
@@ -46,7 +50,11 @@ exports.updateDetail=wrapAsync(async function (req,res,next){
 
     await detailModel.update(id, updateDetail, function(err,datosDetalle){
         if(err|| !datosDetalle){
-            next(new AppError('Error al actualizar el Detalle',404))
+            if(err.code === 'ER_DUP_ENTRY'){
+                next(new AppError('El detalle ya existe con ese plan y ejercicio', 409))//409 Conflicto
+            }else{
+                next(new AppError('Error al actualizar el Detalle',500))
+            }
         }else{
             res.status(200).json({message:'Detalle editado con exito', datosDetalle})
         }

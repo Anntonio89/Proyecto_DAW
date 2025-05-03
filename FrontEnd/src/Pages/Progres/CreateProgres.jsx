@@ -61,10 +61,13 @@ function CreateProgres() {
         <h1 className='progres-Titulo'>Registrar Progreso</h1>
         <form className='progres-Form' onSubmit={handleSubmit}>
             <input name='id_usuario' value={form.id_usuario} onChange={handleChange} placeholder='ID Usuario' required />
+            <input name='nombre_usuario' value={form.nombre_usuario} onChange={handleChange} placeholder='Nombre Usuario' required />
             <input name='id_plan' value={form.id_plan} onChange={handleChange} placeholder='ID Plan' required />
-            <input name='peso' value={form.peso} type='number' step='any' onChange={handleChange} placeholder='Peso (kg)' required />
-            <input name='IMC' value={form.IMC} type='number' step='any' onChange={handleChange} placeholder='IMC' required />
-            <input name='indice_grasa' value={form.indice_grasa} type='number' step='any' onChange={handleChange} placeholder='% Grasa' required />
+            <input name='nombre_plan' value={form.nombre_plan} onChange={handleChange} placeholder='Nombre Plan' required />
+            <input name='peso' value={form.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' required />
+            <input name='IMC' value={form.IMC} type='number' onChange={handleChange} placeholder='IMC' required />
+            <input name='indice_grasa' value={form.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' required />
+            <input name='fecha' value={new Date().toLocaleDateString()} type='date' onChange={handleChange} placeholder='Fecha' required />
             <textarea name='observaciones' value={form.observaciones} onChange={handleChange} placeholder='Observaciones (opcional)' />
             <button type='submit' className='progres-button'>Guardar Progreso</button>
         </form>

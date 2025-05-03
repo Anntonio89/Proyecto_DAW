@@ -33,7 +33,7 @@ function Login() {
                     confirmButtonText:'Volver'
                   })
           navigate('/')     
-          window.location.reload()         
+          // window.location.reload()         
         
         }catch(err){
           if(err.response && err.response.status===401){

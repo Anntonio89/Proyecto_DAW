@@ -38,12 +38,16 @@ exports.createExercice=wrapAsync(async function(req,res,next){
         grupo_muscular: req.body.grupo_muscular,
         nivel:req.body.nivel,
         descripcion:req.body.descripcion,
-        imagen:req.body.imagen
+        imagen:req.body.imagen || imagen//Si ya hay imagen, se emplea, si no se usa el que se envia desde el body o si no null.
     })
 
     await exerciceModel.create(newExercice, function(err, datosEjercicioCreado){
         if(err){
-            next(new AppError('Error al crear el ejercicio',404))
+            if(err.code === 'ER_DUP_ENTRY'){
+                next(new AppError('El ejercicio ya existe', 409))//409 Conflicto
+            }else{
+                next(new AppError('Error al crear el ejercicio',500))
+            }
         }else{
             res.status(201).json(datosEjercicioCreado)
         }
@@ -64,12 +68,16 @@ exports.updateExercice=wrapAsync(async function (req,res,next){
         descripcion:req.body.descripcion|| null,
         imagen:req.body.imagen || imagen
     }
-
+    
     const updateExercice = new exerciceModel(updateExer)
 
     await exerciceModel.update(id, updateExercice, function(err,datosEjercicio){
         if(err|| !datosEjercicio){
-            next(new AppError('Error al actualizar el ejercicio',404))
+            if(err.code === 'ER_DUP_ENTRY'){
+                next(new AppError('El ejercicio ya existe', 409))//409 Conflicto
+            }else{
+                next(new AppError('Error al actualizar el ejercicio',500))
+            }            
         }else{
             res.status(200).json({message:'Ejercicio editado con exito', datosEjercicio})
         }

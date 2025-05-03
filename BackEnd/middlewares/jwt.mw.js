@@ -20,10 +20,16 @@ exports.authenticate = (req,res,next)=>{
     if(token){
         jwt.verify(token, process.env.SECRET_KEY,(err,decoded)=>{
             if(err){
+                console.log(err)
                 next (new AppError('Token no válida',401))
             }else{
+                req.user=decoded.userData
+                req.session.userLogued={
+                    data:decoded.userData, 
+                    token:token
+                }
                 next()
-                //console.log(decoded)
+                console.log('DECODED',decoded)
             }
         })
     }else{
