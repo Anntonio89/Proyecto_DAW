@@ -5,15 +5,20 @@ const {plan}=require('../utils/mysql.config')
 const jwtMW = require('../middlewares/jwt.mw')
 const rutasProtegidasMW=require('../middlewares/rutasProtegidas.mw')
 
+router.get('/plan', jwtMW.authenticate, planController.findByFilterUser)
 router.get('/', jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.findAllPlans)
 router.get('/:id', jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.findPlanById)
-router.post('/',jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.createPlan)
+router.post('/', jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.createPlan)
 router.put('/:id',jwtMW.authenticate, rutasProtegidasMW.requireCoach,planController.updatePlan)
-router.delete('/:id',jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.deletePlan)
+router.delete('/:id', jwtMW.authenticate, rutasProtegidasMW.requireCoach, planController.deletePlan)
+router.get('/:id/details', jwtMW.authenticate, planController.findPlanWithDetails)
+
 // router.get('/', planController.findAllPlans)
 // router.get('/:id', planController.findPlanById)
 // router.post('/', planController.createPlan)
 // router.put('/:id', planController.updatePlan)
 // router.delete('/:id', planController.deletePlan)
+// router.get('/:id/details', planController.findPlanWithDetails)
+
 
 module.exports=router

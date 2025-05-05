@@ -1,5 +1,5 @@
 import {useEffect, useState} from 'react'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import { useParams } from 'react-router-dom'
 
 function DetailsExercice() {
@@ -10,7 +10,7 @@ function DetailsExercice() {
     useEffect(()=>{
         const fetchExercices=async()=>{
                 try {
-                    const res=await axios.get(`http://localhost:3015/exercice/${id}`)
+                    const res=await axiosClient.get(`http://localhost:3015/exercice/${id}`)
                     setExercice(res.data[0])
                 } catch (error) {
                     console.error(error)

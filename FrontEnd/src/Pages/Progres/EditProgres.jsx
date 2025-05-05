@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
 function EditProgres() {
@@ -12,7 +12,7 @@ function EditProgres() {
     useEffect(()=>{
         const fetch=async()=>{
             try {
-                const res=await axios.get(`http://localhost:3015/progres/${id}`)
+                const res=await axiosClient.get(`http://localhost:3015/progres/${id}`)
                 setProgres(res.data[0])
                 
             } catch (error) {
@@ -32,7 +32,7 @@ function EditProgres() {
         e.preventDefault()
         try {
             
-            const res= await axios.put(`http://localhost:3015/progres/${id}`, progres)
+            const res= await axiosClient.put(`http://localhost:3015/progres/${id}`, progres)
 
             if(res){
                 

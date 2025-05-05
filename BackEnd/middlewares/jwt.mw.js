@@ -17,10 +17,20 @@ function extractToken(req){
 exports.authenticate = (req,res,next)=>{
     const token = extractToken(req)
     console.log('TOKEN: ', token)
+    // try {
+    //     const decodedToken = jwt.decode(token)
+    //     console.log('DECODED SIN VERIFICAR:', decodedToken)
+    //   } catch (error) {
+    //     console.log('ERROR AL DECODIFICAR:', error)
+    //   }
     if(token){
         jwt.verify(token, process.env.SECRET_KEY,(err,decoded)=>{
             if(err){
                 console.log(err)
+                // Si el token expiró, destruir la sesión para que no se reutilice
+            if (err.name === 'TokenExpiredError' && req.session) {
+                req.session.destroy()
+            }
                 next (new AppError('Token no válida',401))
             }else{
                 req.user=decoded.userData
@@ -29,7 +39,7 @@ exports.authenticate = (req,res,next)=>{
                     token:token
                 }
                 next()
-                console.log('DECODED',decoded)
+                console.log('DECODED', decoded)
             }
         })
     }else{
@@ -39,7 +49,7 @@ exports.authenticate = (req,res,next)=>{
 
 exports.createJWT=(req,res,next,userData)=>{
     try{
-        const token = jwt.sign({userData},process.env.SECRET_KEY,{expiresIn:1440})//expira en 10 minutos
+        const token = jwt.sign({userData},process.env.SECRET_KEY,{expiresIn:'1h'})//expira en 10 minutos
         if(token){
             return token
         }else{
@@ -56,8 +66,8 @@ exports.destroyJWT =(req)=>{
         return false
     }
     try {
-        jwt.sign({}, req.session.userLogued.token,{expiresIn:1})//JWT que expira inmediatamente
-        req.session.userLogued.token=null//JWT eliminado desde la session
+        //jwt.sign({}, req.session.userLogued.token,{expiresIn:1})//JWT que expira inmediatamente
+        req.session.userLogued=null//JWT eliminado desde la session
         return true
     } catch (error) {
         next(new AppError(error.message,500))

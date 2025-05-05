@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
 function EditUser() {
@@ -12,7 +12,7 @@ function EditUser() {
     useEffect(()=>{
         const fetch=async()=>{
             try {
-                const res=await axios.get(`http://localhost:3015/users/${id}`)
+                const res=await axiosClient.get(`http://localhost:3015/users/${id}`)
                 setUser(res.data[0])
                 
             } catch (error) {
@@ -32,7 +32,7 @@ function EditUser() {
         e.preventDefault()
         try {
             
-            const res= await axios.put(`http://localhost:3015/users/${id}`, user)
+            const res= await axiosClient.put(`http://localhost:3015/users/${id}`, user)
 
             if(res){
                 
@@ -69,8 +69,6 @@ function EditUser() {
                 <input name='apellidos' value={user.apellidos} onChange={handleChange} placeholder='Apellidos' required/>
                 <input name='email' value={user.email} type='email' onChange={handleChange} placeholder='Email' required/>
                 <input name='password' value={user.password} type='password' onChange={handleChange} placeholder='Contraseña' required/>
-                <input name='altura' value={user.altura} type='number' onChange={handleChange} placeholder='Altura (m)' required/>
-                <input name='peso' value={user.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' required/>
                 <input name='edad' value={user.edad} type='number' onChange={handleChange} placeholder='Edad' required/>
                 <select name='sexo' value={user.sexo} onChange={handleChange}>
                     <option value='' disabled>Sexo</option>

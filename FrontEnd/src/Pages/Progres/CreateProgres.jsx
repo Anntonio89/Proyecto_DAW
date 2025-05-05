@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
 function CreateProgres() {
@@ -27,7 +27,7 @@ function CreateProgres() {
     const handleSubmit=async(e)=>{
         e.preventDefault()
         try {
-            const res=await axios.post('http://localhost:3015/progres', form)
+            const res=await axiosClient.post('http://localhost:3015/progres', form)
             Swal.fire({
                 title: 'Progreso registrado',
                 text: 'El progreso de entrenamiento se ha guardado correctamente.',

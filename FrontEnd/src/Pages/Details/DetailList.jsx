@@ -3,20 +3,20 @@ import { NavLink } from 'react-router-dom'
 import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
-function UsersList() {
+function DetailList() {
 
-    const [users,setUsers]=useState([])
+    const [detail,setDetail]=useState([])
 
     useEffect(()=>{
-        const fetchUsers=async()=>{
+        const fetchdetail=async()=>{
             try {
-                const res=await axiosClient.get('http://localhost:3015/users')
-                setUsers(res.data)      
-                console.log('Usuarios: ' , res.data)          
+                const res=await axiosClient.get('/details')
+                setDetail(res.data)      
+                console.log('detalles: ' , res.data)          
             } catch (error) {
                 Swal.fire({
                     title:'Error',
-                    text:'Error al obtener usuarios',
+                    text:'Error al obtener detalles',
                     icon:'error',
                     background:'black',
                      confirmButtonColor: '#d1006a',
@@ -24,13 +24,13 @@ function UsersList() {
                 }) 
             }
         }
-        fetchUsers()
+        fetchdetail()
     },[])
 
     const handleDelete = (id) => {
         Swal.fire({
             title: '¿Estás seguro?',
-            text: 'Esta acción eliminará el usuario.',
+            text: 'Esta acción eliminará el detalle.',
             icon: 'warning',
             showCancelButton: true,
             confirmButtonColor: '#d1006a',
@@ -42,11 +42,11 @@ function UsersList() {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await axiosClient.delete(`http://localhost:3015/users/${id}`)
-                    setUsers(prev => prev.filter(e => e.id !== id))
+                    await axiosClient.delete(`/details/${id}`)
+                    setDetail(prev => prev.filter(e => e.id !== id))
                     Swal.fire({
                         title: 'Eliminado',
-                        text: 'El usuario ha sido eliminado.',
+                        text: 'El detalle ha sido eliminado.',
                         icon: 'success',
                         background: 'black',
                         color: '#fff',
@@ -55,7 +55,7 @@ function UsersList() {
                 } catch (err) {
                     Swal.fire({
                         title: 'Error',
-                        text: 'No se pudo eliminar el usuario.',
+                        text: 'No se pudo eliminar el detalle.',
                         icon: 'error',
                         background: 'black',
                         confirmButtonColor: '#d1006a'
@@ -67,43 +67,49 @@ function UsersList() {
 
     return (
         <div className='container exercice-Container mt-4'>
-            {users.length>0?(
+            <NavLink to={`/createDetails`}>
+                <button className='btn-custom-edit'>CREAR DETALLE</button>
+            </NavLink>
+            {detail.length>0?(
                 <table className='table table text-center'>
                     <thead className='thead-dark'>
                         <tr>
-                            <th>Nombre</th>
-                            <th>Apellidos</th>
-                            <th>Email</th>
-                            <th>Edad</th>
-                            <th>Sexo</th>
-                            <th>Rol</th>
+                            <th>ID</th>
+                            <th>Ejercicio</th>
+                            <th>Dia Semana</th>
+                            <th>Series</th>
+                            <th>Repeticiones</th>
+                            <th>Descanso</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {users.map((users)=>(
-                        <tr key={users.id}>
-                            <td>{users.nombre}</td>
-                            <td>{users.apellidos}</td>
-                            <td>{users.email}</td>
-                            <td>{users.edad}</td>
-                            <td>{users.sexo}</td>
-                            <td>{users.rol}</td>
+                        {detail.map((detail)=>(
+                        <tr key={detail.id}>
+                            <td>{detail.id_plan}</td>
+                            <td>{detail.id_ejercicio}</td>
+                            <td>{detail.dia_semana}</td>
+                            <td>{detail.series}</td>
+                            <td>{detail.repeticiones}</td>
+                            <td>{detail.descanso}</td>
                             <td>
-                            <NavLink to={`/userEdit/${users.id}`}>
+                            <NavLink to={`/detailDetails/${detail.id}`}>
+                                <button className='btn-custom-delete'>Detalles</button>
+                            </NavLink>
+                            <NavLink to={`/detailEdit/${detail.id}`}>
                                 <button className='btn-custom-edit'>Editar</button>
                             </NavLink>
-                                <button className='btn-custom-delete'onClick={()=>handleDelete(users.id)}>Eliminar</button>
+                                <button className='btn-custom-delete'onClick={()=>handleDelete(detail.id)}>Eliminar</button>
                             </td>
                         </tr>
                     ))}
                 </tbody>
-                </table>
+                </table>                
             ):(
-                <p>No hay ejercicios disponibles</p>
+                <p>No hay detalles disponibles</p>
             )}
             
         </div>
     )
 }
 
-export default UsersList
+export default DetailList

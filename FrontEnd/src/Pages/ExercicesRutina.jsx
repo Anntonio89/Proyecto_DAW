@@ -83,9 +83,9 @@ function ExerciceRut() {
                     key={index}
                     className='col-md-4 text-center mb-4'
                     style={{
-                    opacity: imagenIndex === index ? 1 : 0.4,
-                    transform: imagenIndex === index ? 'scale(1.1)' : 'scale(0.95)',
-                    transition: 'all 0.5s ease-in-out'
+                      opacity: imagenIndex === index ? 1 : 0.2,
+                      transform: imagenIndex === index ? 'scale(1.1)' : 'scale(0.95)',
+                      transition: 'all 0.5s ease-in-out'
                     }}
                 >
                     <img

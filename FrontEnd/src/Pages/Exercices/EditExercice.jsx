@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react'
 import {useParams, useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
 const baseImg = "http://localhost:3015/img_uploaded/"
@@ -15,7 +15,7 @@ function EditExercice() {
     useEffect(()=>{
         const fetch=async()=>{
             try {
-                const res=await axios.get(`http://localhost:3015/exercice/${id}`)
+                const res=await axiosClient.get(`http://localhost:3015/exercice/${id}`)
                 setExercice(res.data[0])
                 setImg(baseImg + res.data[0].imagen)
                 
@@ -44,7 +44,7 @@ function EditExercice() {
                 formData.append(key, exercice[key])
             }
 
-            const res= await axios.put(`http://localhost:3015/exercice/${id}`, formData, {
+            const res= await axiosClient.put(`http://localhost:3015/exercice/${id}`, formData, {
                 headers:{ 
                     'Content-Type':'multipart/form-data'
                 }
@@ -67,7 +67,7 @@ function EditExercice() {
                      popup: ''
                   }
                 })
-            navigate('/exercice')
+            navigate('/exerciceList')
             
         } catch (error) {
             console.error('Error al actualizar el ejercicio:', error)

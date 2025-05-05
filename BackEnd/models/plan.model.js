@@ -6,6 +6,7 @@ let Plan = function(plan){
     //Atributos del plan
     //id (auto incremental)
     this.id_entrenador=plan.id_entrenador
+    this.id_usuario=plan.id_usuario
     this.plan=plan.plan
     this.nivel=plan.nivel 
     this.createdDate=new Date()
@@ -115,10 +116,34 @@ Plan.create = async function(newPlan, result){
     })
 }
 
-//Buscar a un plan por un filtro
-Plan.findByFilter = async(filter)=>{
-    const PlanFound=await Plan.findOne(filter)
-    return PlanFound
+//Buscar a un plan por un filtro (id_usuario)
+Plan.findByFilter = async(userId,result)=>{
+
+    let connection = mysql.createConnection(dbConn)
+
+    connection.connect((error) => {
+        if (error) {
+            console.log('Error con la conexión a MySQL. Des: ' + error)
+            result(error, null)
+        } else {
+            console.log('Conexión a MySQL abierta')
+            const sql = 'SELECT * FROM planes_entrenamiento WHERE id_usuario = ?'
+            connection.query(sql, [userId], (err, datos) => {
+                if (err) {
+                    result(err, null)
+                } else {
+                    result(null, datos)
+                }
+            })
+            connection.end((err) => {
+                if (err) {
+                    console.log('Error al desconectar de MySQL. Des: ' + err)
+                } else {
+                    console.log('Conexión MySQL cerrada')
+                }
+            })
+        }
+    })
 }
 
 //Actualizar un plan
@@ -183,5 +208,74 @@ Plan.delete = async function(idPlan, result){
         }
     })
 }
+
+// Obtener un plan con todos sus detalles y ejercicios asociados
+Plan.findWithDetails = function(idPlan, result) {
+    let connection = mysql.createConnection(dbConn)
+  
+    connection.connect((error) => {
+        if (error) {
+            console.log('Error con la conexión a MySQL. Des: ' + error)
+            result(error, null)
+        } else {
+            console.log('Conexión a MySQL abierta')
+            const sql = `
+                SELECT 
+                    p.id AS plan_id, p.plan, p.nivel, 
+                    d.id AS detalle_id, d.dia_semana, d.series, d.repeticiones, d.descanso, 
+                    e.id AS ejercicio_id, e.nombre, e.categoria, e.grupo_muscular, e.nivel AS nivel_ejercicio, e.descripcion, e.imagen
+                FROM planes_entrenamiento p
+                LEFT JOIN detalles_plan d ON p.id = d.id_plan
+                LEFT JOIN ejercicios e ON d.id_ejercicio = e.id
+                WHERE p.id = ?
+            `
+            connection.query(sql, [idPlan], (err, datos) => {
+                if (err) {
+                    result(err, null)
+                } else if (datos.length === 0) {
+                    result({ error: 'No existe el plan con ese ID' }, null)
+                } else {
+                    // Estructuramos los datos
+                    const plan = {
+                        id: datos[0].plan_id,
+                        plan: datos[0].plan,
+                        nivel: datos[0].nivel,
+                        detalles: []
+                    }
+                    datos.forEach(row => {
+                        if (row.detalle_id) {
+                            plan.detalles.push({
+                                id: row.detalle_id,
+                                dia_semana: row.dia_semana,
+                                series: row.series,
+                                repeticiones: row.repeticiones,
+                                descanso: row.descanso,
+                                ejercicio: {
+                                    id: row.ejercicio_id,
+                                    nombre: row.nombre,
+                                    categoria: row.categoria,
+                                    grupo_muscular: row.grupo_muscular,
+                                    nivel: row.nivel_ejercicio,
+                                    descripcion: row.descripcion,
+                                    imagen: row.imagen
+                                }
+                            })
+                        }
+                    })
+                    result(null, plan)
+                }
+            })
+  
+            connection.end((err) => {
+                if (err) {
+                    console.log('Error al desconectar de MySQL. Des: ' + err)
+                } else {
+                    console.log('Conexion MySQL cerrada')
+                }
+            })
+        }
+    })
+  }
+  
 
 module.exports = Plan//Se exporta el modelo

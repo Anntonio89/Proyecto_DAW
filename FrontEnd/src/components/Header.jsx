@@ -20,6 +20,7 @@ function Header() {
             <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : '')}>Inicio</NavLink>
             <NavLink to='/services' className={({ isActive }) => (isActive ? 'active' : '')}>Qué ofrecemos</NavLink>
             <NavLink to='/contact'className={({ isActive }) => (isActive ? 'active' : '')}>Contacto</NavLink>
+            {/*Acceder (Login) / Ver perfil según logueado*/}
             {!userLogued ? <NavLink to='/login'className={({ isActive }) => (isActive ? 'active' : '')}>Acceder</NavLink> 
                         : <NavLink to='/login'className={({ isActive }) => (isActive ? 'active' : '')}>Ver Perfil</NavLink>
             }

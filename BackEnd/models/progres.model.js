@@ -119,12 +119,6 @@ Progres.create = async function(newProgres, result){
     })
 }
 
-//Buscar a un progreso por un filtro
-Progres.findByFilter = async(filter)=>{
-    const ProgresFound=await Progres.findOne(filter)
-    return ProgresFound
-}
-
 //Actualizar un progreso
 Progres.update = async function(idProgres, updateProgres, result){
 
@@ -182,6 +176,36 @@ Progres.delete = async function(idProgres, result){
                     console.log('Error al desconectar de MySQL. Des: ' + err)
                 }else{
                     console.log('Conexion MySQL cerrada')
+                }
+            })
+        }
+    })
+}
+
+//Buscar a un progreso por un filtro (id_usuario)
+Progres.findByFilter = async(userId, result)=>{
+
+    let connection = mysql.createConnection(dbConn)
+
+    connection.connect((error) => {
+        if (error) {
+            console.log('Error con la conexión a MySQL. Des: ' + error)
+            result(error, null)
+        } else {
+            console.log('Conexión a MySQL abierta')
+            const sql = 'SELECT * FROM progresos WHERE id_usuario = ?'
+            connection.query(sql, [userId], (err, datos) => {
+                if (err) {
+                    result(err, null)
+                } else {
+                    result(null, datos)
+                }
+            })
+            connection.end((err) => {
+                if (err) {
+                    console.log('Error al desconectar de MySQL. Des: ' + err)
+                } else {
+                    console.log('Conexión MySQL cerrada')
                 }
             })
         }

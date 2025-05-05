@@ -48,7 +48,7 @@ nav.nav{
     color:#d1006a;
 }
 
-.home-Container{
+.home-Container, .error{
     background-image: url('/0.jpg');
     background-size: cover;
     background-position: center;
@@ -60,7 +60,7 @@ nav.nav{
     height: 100vh;
 }
 
-.home-content{
+.home-content, .error{
     text-align: center;
     flex-direction: column;
     align-items: center;
@@ -75,6 +75,32 @@ nav.nav{
     text-align: center;
 
 }
+.error h1{
+    font-size: 70px;
+    font-style: italic;
+    color: #d1006a;
+}
+.error p{
+    font-size: 1.5rem;
+    color: black;
+}
+
+.link-Error{
+    text-decoration: none;
+    background-color: black;
+    padding: 0.9rem;
+    border-radius: 10px;
+    border: #d1006a 2px solid;
+    color: #d1006a;
+    font-weight: bold;
+}
+
+.link-Error:hover{
+    background-color: #d1006a;
+    color: black;
+    border-color: black;
+}
+
 .footer{
     display:flex;
     justify-content: center;
@@ -85,7 +111,6 @@ nav.nav{
     background-color: black;
     font-size: 0.8rem;
 }
-
 .footer-Textos{
     text-align: center;
 }
@@ -172,7 +197,7 @@ nav.nav{
 .services{
     background-color: black;
     color:#d1006a;
-    height: 100vh;
+    height: 150vh;
 }
 .services a{
     text-decoration: none;
@@ -460,7 +485,7 @@ nav.nav{
 .services{
     background-color: black;
     color:#d1006a;
-    height: 100vh;
+    height: 150vh;
 }
 .services a{
     text-decoration: none;
@@ -497,7 +522,7 @@ nav.nav{
     border-radius: 10px;
 }
 .exercicesFun{
-    height: 100vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -506,7 +531,7 @@ nav.nav{
     background-size: cover;
     background-position: center;
     position: relative;
-    
+    top:0;    
 }
 .card{
     border:1px solid #d1006a;
@@ -582,7 +607,7 @@ nav.nav{
     border-radius: 4px;
     min-width: 100px;
     transition: all 0.3s ease;
-    margin: 0 5px;
+    margin: 5px;
 }
 
 .btn-custom-edit {
@@ -631,3 +656,17 @@ nav.nav{
     transform: scale(0.9);
 }
 
+.destacada {
+    border: 2px solid #d1006a;
+    background: #e8f5e9;
+  }
+  
+  .etiqueta-ultimo {
+    top: 0.5rem;
+    right: 0.5rem;
+    background: #d1006a;
+    color: white;
+    padding: 0.2rem 0.5rem;
+    font-size: 0.75rem;
+    border-radius: 4px;
+  }

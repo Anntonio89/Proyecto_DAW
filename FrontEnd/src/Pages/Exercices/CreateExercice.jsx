@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import {useNavigate} from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
 function CreateExercice() {
@@ -40,7 +40,7 @@ function CreateExercice() {
               for(const key in form){
                   formData.append(key, form[key])
             }
-            const res=await axios.post('http://localhost:3015/exercice', formData, {
+            const res=await axiosClient.post('http://localhost:3015/exercice', formData, {
               headers:{ 
               'Content-Type':'multipart/form-data'
             }
@@ -59,7 +59,7 @@ function CreateExercice() {
                 }
             })
             console.log('Ejercicio creado: ', res.data)
-            navigate('/exercice')
+            navigate('/exerciceList')
             
         } catch (error) {
             console.log(error)

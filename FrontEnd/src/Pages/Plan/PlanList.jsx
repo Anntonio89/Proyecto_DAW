@@ -67,6 +67,12 @@ function PlanList() {
 
     return (
         <div className='container exercice-Container mt-4'>
+            <NavLink to={`/createPlan`}>
+                <button className='btn-custom-edit'>CREAR PLAN</button>
+            </NavLink>
+            <NavLink to={`/detailsList`}>
+                <button className='btn-custom-edit'>VER DETALLES</button>
+            </NavLink>
             {plan.length>0?(
                 <table className='table table text-center'>
                     <thead className='thead-dark'>
@@ -88,8 +94,10 @@ function PlanList() {
                             <td>{plan.nivel}</td>
                             <td>{new Date(plan.createdDate).toLocaleDateString()}</td>
                             <td>{new Date(plan.modifiedDate).toLocaleDateString()}</td>
-                
                             <td>
+                            <NavLink to={`/planDetails/${plan.id}`}>
+                                <button className='btn-custom-delete'>Detalles</button>
+                            </NavLink>
                             <NavLink to={`/planEdit/${plan.id}`}>
                                 <button className='btn-custom-edit'>Editar</button>
                             </NavLink>
@@ -98,7 +106,7 @@ function PlanList() {
                         </tr>
                     ))}
                 </tbody>
-                </table>
+                </table>                
             ):(
                 <p>No hay planes disponibles</p>
             )}

@@ -1,16 +1,25 @@
 import {useState,useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
+import storage from '../../utils/storage'
 import Swal from 'sweetalert2'
 
 function ExerciceList() {
 
     const [exercices,setExercices]=useState([])
+    const [entrenador,setEntrenador]=useState(false)
 
     useEffect(()=>{
+
+        const user=storage.get('authUser')
+
+        if(user.rol==='ENTRENADOR'){
+            setEntrenador(true)
+        }
+
         const fetchEjercicios=async()=>{
             try {
-                const res=await axios.get('http://localhost:3015/exercice')
+                const res=await axiosClient.get('http://localhost:3015/exercice')
                 setExercices(res.data)      
                 console.log('Ejercicios: ' , res.data)          
             } catch (error) {
@@ -42,7 +51,7 @@ function ExerciceList() {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await axios.delete(`http://localhost:3015/exercice/${id}`)
+                    await axiosClient.delete(`http://localhost:3015/exercice/${id}`)
                     setExercices(prev => prev.filter(e => e.id !== id))
                     Swal.fire({
                         title: 'Eliminado',
@@ -73,7 +82,13 @@ function ExerciceList() {
                         <tr>
                             <th>Ejercicios</th>
                             <th></th>
-                            <th></th>
+                            {entrenador && (
+                                <th>                               
+                                    <NavLink to={`/exerciceCreate`}>
+                                        <button className='btn-custom-edit'>CREAR EJERCICIO</button>
+                                    </NavLink>
+                                </th>
+                            )}
                         </tr>
                     </thead>
                     <tbody>
@@ -85,16 +100,19 @@ function ExerciceList() {
                                 </NavLink> 
                             </td>
                             <td>{exercices.nombre}</td>
-                            <td>
-                            <NavLink to={`/exerciceEdit/${exercices.id}`}>
-                                <button className='btn-custom-edit'>Editar</button>
-                            </NavLink>
-                                <button className='btn-custom-delete'onClick={()=>handleDelete(exercices.id)}>Eliminar</button>
-                            </td>
+                            {entrenador && (
+                                <td>
+                                <NavLink to={`/exerciceEdit/${exercices.id}`}>
+                                    <button className='btn-custom-edit'>Editar</button>
+                                </NavLink>
+                                    <button className='btn-custom-delete'onClick={()=>handleDelete(exercices.id)}>Eliminar</button>
+                                </td>
+                            )}
                         </tr>
+                            
                     ))}
                 </tbody>
-                </table>
+                </table>                
             ):(
                 <p>No hay ejercicios disponibles</p>
             )}

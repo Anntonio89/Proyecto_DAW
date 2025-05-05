@@ -33,7 +33,7 @@ function Login() {
                     confirmButtonText:'Volver'
                   })
           navigate('/')     
-          // window.location.reload()         
+          window.location.reload()         
         
         }catch(err){
           if(err.response && err.response.status===401){
@@ -71,7 +71,8 @@ function Login() {
               confirmButtonColor: '#d1006a',
               confirmButtonText:'Volver'
           })
-          navigate('/login')    
+          navigate('/login')  
+          window.location.reload()  
 
         }catch(err){
           Swal.fire({
@@ -103,13 +104,73 @@ function Login() {
             <div className='login-Logout'>
               <h3><strong>Usuario:</strong></h3><p>{userLogued.nombre}</p>
               <h3><strong>Correo:</strong></h3><p>{userLogued.email}</p>
-              <Link to='/details-progres' className='user-Progres' 
-                  style={{color:'#d1006a',
-                          textDecoration:'none',
-                          fontWeight:'bold',
-                        }}>
-                  Ver Progreso
-              </Link>
+              <h3><strong>Rol:</strong></h3><p>{userLogued.rol}</p>
+              {/*Se muestran diferentes versiones del perfil en función del rol*/}
+              {/*USUARIOS accederán a sus planes asignados y asus progresos personales*/}
+              {userLogued.rol==='USUARIO' && (
+                <>
+                  <Link to='/details-progres' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Progreso
+                  </Link>
+                  <Link to='/planUser' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Plan Asignado
+                  </Link>
+                </>
+              )}
+              {/*ENTRENADORES accederán a todos los planes asignados y a los progresos personales*/}
+              {userLogued.rol==='ENTRENADOR' && (
+                <>
+                  <Link to='/progresList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Progresos
+                  </Link>
+                  <Link to='/planList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Planes
+                  </Link>
+                </>
+              )}
+              {/*ADMIN accederá a todos los planes asignados y a los progresos personales, además de los usuarios*/}
+              {userLogued.rol==='ADMIN' && (
+                <>
+                  <Link to='/progresList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Progresos
+                  </Link>
+                  <Link to='/planList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Planes
+                  </Link>
+                  <Link to='/usersList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Ver Usuarios
+                  </Link>
+                </>
+              )}
+
               <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>
             </>

@@ -64,3 +64,16 @@ exports.deleteProgres=wrapAsync(async function (req,res,next){
         }
     })
 })
+
+//Buscar Progreso por un filtro (id_usuario)
+exports.findByFilterUser=wrapAsync(async function(req,res,next){
+    const id_usuario=req.user.id
+    //console.log('ID USUARIO:',req.user)
+    await progresModel.findByFilter(id_usuario, function(err,datosProgreso){
+        if(err){
+            next(new AppError('Error al buscar el progreso por id_usuario',404))
+        }else{
+            res.status(200).json(datosProgreso)
+        }
+    })
+})

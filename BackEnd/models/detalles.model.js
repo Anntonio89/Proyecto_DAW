@@ -6,13 +6,12 @@ let Detail = function(detalle){
 
     //Atributos del detalle
     //id (auto incremental)
-    this.id_plan=detalle.id_plan    
+    this.id_plan=detalle.id_plan 
     this.id_ejercicio=detalle.id_ejercicio
     this.dia_semana=detalle.dia_semana
     this.series=detalle.series
     this.repeticiones=detalle.repeticiones
-    this.descanso=detalle.descanso
-    
+    this.descanso=detalle.descanso       
 }
 
 //Metodos del modelo
@@ -119,9 +118,40 @@ Detail.create = async function(newDetail, result){
 }
 
 //Buscar a un detalle por un filtro
-Detail.findByFilter = async(filter)=>{
-    const DetailFound=await Detail.findOne(filter)
-    return DetailFound
+Detail.findByFilter = async function(filter, result){
+    let connection=mysql.createConnection(dbConn)
+
+    connection.connect((error)=>{
+        if(error){
+            console.log('Error con la conexión a MySQL. Des: ' + error)
+            result(err,null)
+        }else{
+            console.log('Conexión a MySQL abierta')//Se filtra para encontrar un detalle que coincida con el id del plan el del ejercicio y el dia de la semana. 
+            //Para comprobar que no se repiten los ejercicios en el mismo dia de la semana dentro deun plan
+            const sql = 'SELECT * FROM detalles_plan WHERE id_plan = ? AND id_ejercicio = ? AND dia_semana = ?'
+            const params = [filter.id_plan, filter.id_ejercicio, filter.dia_semana]
+
+            connection.query(sql, params, (err, datos) => {
+                if (err) {
+                    result(err, null)
+                } else {
+                    if (datos.length > 0) {
+                        result(null, datos[0]) //Primer detalle encontrado
+                    } else {
+                        result(null, null) //No se encontró ningún detalle
+                    }
+                }
+            })
+
+            connection.end((err) => {
+                if (err) {
+                    console.log('Error al desconectar de MySQL. Des: ' + err)
+                } else {
+                    console.log('Conexion MySQL cerrada')
+                }
+            })
+        }
+    })
 }
 
 //Actualizar un detalle

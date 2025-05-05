@@ -1,6 +1,6 @@
 import {useState,useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
-import axios from 'axios'
+import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
 function ProgresList() {
@@ -10,7 +10,7 @@ function ProgresList() {
     useEffect(()=>{
         const fetchprogres=async()=>{
             try {
-                const res=await axios.get('http://localhost:3015/progres')
+                const res=await axiosClient.get('http://localhost:3015/progres')
                 setProgres(res.data)      
                 console.log('Progresos: ' , res.data)          
             } catch (error) {

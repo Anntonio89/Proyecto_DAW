@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Footer from './components/Footer'
 import ProtectedRoutes from './components/ProtectedRoutes'
 import Home from './Pages/Home'
+import Error from './Pages/Error'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Services from './Pages/Services'
@@ -20,7 +21,14 @@ import EditExercice from './Pages/Exercices/EditExercice'
 import UsersList from './Pages/Users/UsersList'
 import EditUser from './Pages/Users/EditUsers'
 import PlanList from './Pages/Plan/PlanList'
+import CreatePlan from './Pages/Plan/CreatePlan'
 import ExerciceRut from './Pages/ExercicesRutina'
+import EditPlan from './Pages/Plan/EditPlan'
+import DetailsPlan from './Pages/Plan/DetailsPlan'
+import PlanUser from './Pages/Plan/PlanUser'
+import CreateDetails from './Pages/Details/CreateDetails'
+import DetailList from './Pages/Details/DetailList'
+import EditDetail from './Pages/Details/EditDetails'
 
 function App() {
 
@@ -29,29 +37,46 @@ function App() {
     <Router>
       <Header/>
       <Routes>
+        {/* Rutas publicas */}
         <Route path='/' element={<Home/>}/>
         <Route path='/services' element={<Services/>}/>
-        <Route path='/exerciceRutina' element={<ExerciceRut/>}/>
-        <Route path='/exercice' element={<ExerciceList/>}/>
-        <Route path='/exerciceDetail/:id' element={<DetailsExercice/>}/>
-        <Route path='/exerciceEdit/:id' element={<EditExercice/>}/>
-        <Route path='/exerciceCreate' element={<CreateExercice/>}/>
-        <Route element={<ProtectedRoutes/>}>
-            <Route path='/plans' element={<PlanList/>}/>
-        </Route>
-        
-        <Route path='/usersList' element={<UsersList/>}/>
-        <Route path='/userEdit/:id' element={<EditUser/>}/>
-        {/* Rutas protegidas encapsuladas dentro de este Route */}
-        {/* <Route element={<ProtectedRoutes/>}> */}
-          <Route path='/exerciceFun' element={<ExercicesFun/>}/>
-          <Route path='/progresList' element={<ProgresList/>}/>
-          <Route path='/progres' element={<CreateProgres/>}/>
-          <Route path='/details-progres' element={<DetailsProgres/>}/>
-          <Route path='/progresEdit/:id' element={<EditProgres/>}/>
-        {/* </Route> */}
+        <Route path='/exerciceFun' element={<ExercicesFun/>}/>
         <Route path="/users" element={<Register/>}/>
-        <Route path="/login" element={<Login />} />
+        <Route path="/login" element={<Login />} />   
+        <Route element={<ProtectedRoutes rolPermitido={['USUARIO','ENTRENADOR', 'ADMIN']}/>}>
+          <Route path='/details-progres' element={<DetailsProgres/>}/>
+          <Route path='/exerciceRutina' element={<ExerciceRut/>}/>  
+          <Route path='/planUser' element={<PlanUser/>}/> 
+          <Route path='/exerciceList' element={<ExerciceList/>}/>
+          <Route path='/exerciceDetail/:id' element={<DetailsExercice/>}/>
+          <Route path="/planDetails/:id" element={<DetailsPlan />}/>
+        </Route>
+
+         {/* Rutas protegidas con permiso solo para ENTRENADORES */}
+        <Route element={<ProtectedRoutes rolPermitido={['ENTRENADOR', 'ADMIN']}/>}>
+          {/* CRUD PROGRESOS */}
+          <Route path='/progresList' element={<ProgresList/>}/>
+          <Route path='/progresCreate' element={<CreateProgres/>}/>
+          <Route path='/progresEdit/:id' element={<EditProgres/>}/>
+          {/* CRUD EJERCICIOS */}
+          <Route path='/exerciceCreate' element={<CreateExercice/>}/>
+          <Route path='/exerciceEdit/:id' element={<EditExercice/>}/>
+          {/* CRUD PLANES */}
+          <Route path='/planList' element={<PlanList/>}/>
+          <Route path='/createPlan' element={<CreatePlan/>}/>
+          <Route path='/planEdit/:id' element={<EditPlan/>}/>
+          {/* CRUD DETALLES */}
+          <Route path='/detailsList' element={<DetailList/>}/>
+          <Route path='/createDetails' element={<CreateDetails/>}/>
+          <Route path='/detailEdit/:id' element={<EditDetail/>}/>
+        </Route>        
+        {/* Rutas protegidas con permiso solo para ADMIN */}
+        <Route element={<ProtectedRoutes rolPermitido={['ADMIN']}/>}>
+          <Route path='/usersList' element={<UsersList/>}/>
+          <Route path='/userEdit/:id' element={<EditUser/>}/>
+        </Route>      
+        <Route path='*' element={<Error/>}/>
+
       </Routes>
       <Footer/>
     </Router>
