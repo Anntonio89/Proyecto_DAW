@@ -43,6 +43,13 @@ function CreateDetail() {
             }
             catch (error) {
                 console.error(error)
+                Swal.fire({
+                    title: 'Error',
+                    text: 'No se pudo registrar el detalle.',
+                    icon: 'error',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Reintentar'
+               })   
             }
         }
         fetchEjercicio()
@@ -76,7 +83,7 @@ function CreateDetail() {
                 }
             })
             console.log('Plan creado: ', res.data)
-            navigate('/')
+            navigate('/planList')
             
         } catch (error) {
             console.log(error)

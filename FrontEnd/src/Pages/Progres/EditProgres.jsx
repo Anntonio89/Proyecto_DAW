@@ -68,7 +68,14 @@ function EditProgres() {
             }
             
         } catch (error) {
-            console.error('Error al actualizar el Progreso:', error)
+            console.error('Error al actualizar el progreso:', error)
+            Swal.fire({
+                    title: 'Error',
+                    text: 'No se pudo editar el progreso.',
+                    icon: 'error',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Reintentar'
+            })
         }
     }
 

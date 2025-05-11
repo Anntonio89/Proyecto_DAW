@@ -502,8 +502,11 @@ nav.nav{
     border-color: #d1006a !important;
 }
 .create-Form label{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-size: 1.2rem;
-    color: white;
+    color: black;
     font-weight: bold;
 }
 .home-Container button, .login-Container button, .register-Container button, .create-Container button{

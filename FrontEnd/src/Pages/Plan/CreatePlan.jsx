@@ -6,6 +6,7 @@ import Swal from 'sweetalert2'
 function CreatePlan() {
 
     const [usuario, setUsuario]=useState([])
+    const nivel =["Principiante", "Intermedio", "Avanzado"]
     const navigate =useNavigate()
 
     const [form, setForm]=useState({
@@ -97,12 +98,18 @@ function CreatePlan() {
                     </option>
                 ))}
             </select>
-            <input name='plan' value={form.plan} onChange={handleChange} placeholder='Nombre Plan' required />                  
+            <input name='plan' value={form.plan} onChange={handleChange} placeholder='Nombre Plan' required />  
+            <select name='nivel' value={form.nivel} onChange={handleChange} required>
+                <option value='' disabled>Selecciona un nivel</option>
+                    {nivel.map((nivel, index) => (
+                        <option value={nivel} key={index}>
+                            {nivel}
+                        </option>
+                    ))}
+            </select>                 
             {/* <input name='createdDate' value={new Date().toLocaleDateString()} type='date' onChange={handleChange} placeholder='Fecha Creación' required />
             <input name='modifiedDate' value={new Date().toLocaleDateString()} type='date' onChange={handleChange} placeholder='Fecha Modificación' required /> */}
-            <NavLink to={`/createDetails`}>
-                <button type='submit' className='plan-button'>Continuar</button>
-            </NavLink>
+            <button type='submit' className='plan-button'>Continuar</button>
         </form>
     </div>
   )

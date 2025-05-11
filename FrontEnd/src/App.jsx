@@ -67,6 +67,7 @@ function App() {
           <Route path='/planEdit/:id' element={<EditPlan/>}/>
           {/* CRUD DETALLES */}
           <Route path='/detailsList' element={<DetailList/>}/>
+          <Route path='/createDetails/:idPlan' element={<CreateDetails/>}/>
           <Route path='/createDetails' element={<CreateDetails/>}/>
           <Route path='/detailEdit/:id' element={<EditDetail/>}/>
         </Route>        

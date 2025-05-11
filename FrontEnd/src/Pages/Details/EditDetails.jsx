@@ -85,6 +85,13 @@ useEffect(() => {
             
         } catch (error) {
             console.error('Error al actualizar el detalle:', error)
+            Swal.fire({
+                    title: 'Error',
+                    text: 'No se pudo registrar el detalle.',
+                    icon: 'error',
+                    confirmButtonColor: '#d33',
+                    confirmButtonText: 'Reintentar'
+            })
         }
     }
 
@@ -94,40 +101,52 @@ useEffect(() => {
        
     return (
         <div className='create-Container'>
-            <h1 className='create-Titulo'>Editar Detalle</h1>
+            <h1 className='create-Titulo'>Asignar ejercicio</h1>
             <form onSubmit={handleSubmit} className='create-Form'>
                 {/* <input name='id_plan' value={detail.id_plan} onChange={handleChange} placeholder='ID Plan' required />
                 <input name='id_ejercicio' value={detail.id_ejercicio} onChange={handleChange} placeholder='ID Ejercicio' required />
                 <input name='dia_semana' value={detail.dia_semana} onChange={handleChange} placeholder='Nombre detail' required />                   */}
-                <select name='id_plan' value={detail.id_plan} onChange={handleChange} required>
-                <option value='' disabled>Selecciona un plan</option>
-                    {planes.map((p)=>(
-                        <option value={p.id} key={p.id}>
-                            {p.plan}
-                        </option>   
-                    ))}
-            </select>
-            {/* <input name='id_ejercicio' value={form.id_ejercicio} onChange={handleChange} placeholder='ID Ejercicio' required /> */}
-            <select name='id_ejercicio' value={detail.id_ejercicio} onChange={handleChange} required>
-                <option value='' disabled>Selecciona un ejercicio</option>
-                    {ejercicios.map((e)=>(
-                        <option value={e.id} key={e.id}>
-                            {e.nombre}
-                        </option>   
-                    ))}
-            </select>
-            {/* <input name='dia_semana' value={form.dia_semana} onChange={handleChange} placeholder='Día Semana' required />*/}
-            <select name='dia_semana' value={detail.dia_semana} onChange={handleChange} required>
-                <option value='' disabled>Selecciona un día de la semana</option>
-                    {diasSemana.map((dia, index) => (
-                        <option value={dia} key={index}>
-                            {dia}
-                        </option>
-                    ))}
-            </select>
-                <input name='series' value={detail.series} onChange={handleChange} placeholder='Series' required />
-                <input name='repeticiones' value={detail.repeticiones} onChange={handleChange} placeholder='Repeticiones' required />
-                <input name='descanso' value={detail.descanso} onChange={handleChange} placeholder='Descanso' required />
+                <label>Plan:
+                    <select name='id_plan' value={detail.id_plan} onChange={handleChange} required>
+                        <option value='' disabled>Selecciona un plan</option>
+                            {planes.map((p)=>(
+                                <option value={p.id} key={p.id}>
+                                    {p.plan}
+                                </option>   
+                            ))}
+                    </select>
+                </label>
+                {/* <input name='id_ejercicio' value={form.id_ejercicio} onChange={handleChange} placeholder='ID Ejercicio' required /> */}
+                <label>Ejercicio:
+                    <select name='id_ejercicio' value={detail.id_ejercicio} onChange={handleChange} required>
+                            <option value='' disabled>Selecciona un ejercicio</option>
+                                {ejercicios.map((e)=>(
+                                    <option value={e.id} key={e.id}>
+                                        {e.nombre}
+                                    </option>   
+                                ))}
+                    </select>
+                </label>
+                <label>Día de la semana:
+                {/* <input name='dia_semana' value={form.dia_semana} onChange={handleChange} placeholder='Día Semana' required />*/}
+                    <select name='dia_semana' value={detail.dia_semana} onChange={handleChange} required>
+                        <option value='' disabled>Selecciona un día de la semana</option>
+                            {diasSemana.map((dia, index) => (
+                                <option value={dia} key={index}>
+                                    {dia}
+                                </option>
+                            ))}
+                    </select>
+                </label>
+                <label>Series:
+                    <input name='series' value={detail.series} onChange={handleChange} placeholder='Series' required />
+                </label>
+                <label>Repeticiones:
+                    <input name='repeticiones' value={detail.repeticiones} onChange={handleChange} placeholder='Repeticiones' required />
+                </label>
+                <label>Descanso
+                    <input name='descanso' value={detail.descanso} onChange={handleChange} placeholder='Descanso' required />
+                </label>
                 <button type='submit' className='detail-button'>Guardar Detalle</button>
             </form>
         </div>

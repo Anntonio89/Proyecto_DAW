@@ -32,7 +32,7 @@ function DetailsProgres() {
 
     return (
         <div className='details-Container'>
-            <h1 className='details-Titulo'>Progreso {user.nombre}</h1>
+            <h1 className='details-Titulo'>Progreso de {user.nombre}</h1>
             <div className='details-Card'>
            
                     {progreso.length > 0 ? (

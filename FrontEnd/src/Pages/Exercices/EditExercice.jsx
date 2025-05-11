@@ -71,6 +71,13 @@ function EditExercice() {
             
         } catch (error) {
             console.error('Error al actualizar el ejercicio:', error)
+            Swal.fire({
+                title: 'Error',
+                text: 'No se pudo actualizar el ejercicio.',
+                icon: 'error',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'Reintentar'
+            })
         }
     }
 

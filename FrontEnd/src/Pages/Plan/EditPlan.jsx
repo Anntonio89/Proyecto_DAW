@@ -10,6 +10,7 @@ function EditPlan() {
     const [plan, setPlan] =useState(null)
     const [usuario, setUsuario]=useState([])
     const [userLogued, setUserLogued]=useState(null)
+    const nivel =["Principiante", "Intermedio", "Avanzado"]
 
     const navigate = useNavigate()
     
@@ -74,12 +75,19 @@ function EditPlan() {
                     hideClass: {
                         popup: ''
                     }
-                    })
+                })
                 navigate('/planList')
             }
             
         } catch (error) {
             console.error('Error al actualizar el plan:', error)
+            Swal.fire({
+                title: 'Error',
+                text: 'No se pudo actualizar el plan.',
+                icon: 'error',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'Reintentar'
+            }) 
         }
     }
 
@@ -92,27 +100,43 @@ function EditPlan() {
             <h1 className='create-Titulo'>Editar plan</h1>
             <form onSubmit={handleSubmit} className='create-Form'>
                 {userLogued.rol==='ADMIN' && (
-                <select name='id_entrenador' value={plan.id_entrenador} onChange={handleChange} required>
-                <option value='' disabled>Selecciona un entrenador</option>
-                {usuario.filter(u=>u.rol==='ENTRENADOR')
-                    .map((u)=>(
-                    <option value={u.id} key={u.id}>
-                        {u.nombre} 
-                    </option>
-                ))}
-            </select>
-            )}
+                <label>Entrenador:
+                    <select name='id_entrenador' value={plan.id_entrenador} onChange={handleChange} required>
+                    <option value='' disabled>Selecciona un entrenador</option>
+                    {usuario.filter(u=>u.rol==='ENTRENADOR')
+                        .map((u)=>(
+                        <option value={u.id} key={u.id}>
+                            {u.nombre} 
+                        </option>
+                    ))}
+                    </select>
+                </label>    
+                )}
             {/* <input name='id_usuario' value={form.id_usuario} onChange={handleChange} placeholder='ID Usuario' required /> */}
-            <select name='id_usuario' value={plan.id_usuario} onChange={handleChange} required>
-                <option value='' disabled>Selecciona un usuario</option>
-                {usuario.filter(u=>u.rol==='USUARIO')
-                    .map((u)=>(
-                    <option value={u.id} key={u.id}>
-                        {u.nombre} 
-                    </option>
-                ))}
-            </select>
-                <input name='plan' value={plan.plan} onChange={handleChange} placeholder='Nombre Plan' required />                  
+            <label>Usuario:
+                <select name='id_usuario' value={plan.id_usuario} onChange={handleChange} required>
+                    <option value='' disabled>Selecciona un usuario</option>
+                    {usuario.filter(u=>u.rol==='USUARIO')
+                        .map((u)=>(
+                        <option value={u.id} key={u.id}>
+                            {u.nombre} 
+                        </option>
+                    ))}
+                </select>
+            </label>
+            <label>Plan:
+                <input name='plan' value={plan.plan} onChange={handleChange} placeholder='Nombre Plan' required />
+            </label>
+            <label>Nivel:    
+                <select name='nivel' value={plan.nivel} onChange={handleChange} required>
+                    <option value='' disabled>Selecciona un nivel</option>
+                        {nivel.map((nivel, index) => (
+                            <option value={nivel} key={index}>
+                                {nivel}
+                            </option>
+                        ))}
+                </select>  
+            </label>           
                 {/* <input name='createdDate' value={plan.createdDate} type='date' onChange={handleChange} placeholder='Fecha Creación' required />
                 <input name='modifiedDate' value={plan.modifiedDate} type='date' onChange={handleChange} placeholder='Fecha Modificación' required /> */}
                 <button type='submit' className='plan-button'>Guardar Plan</button>

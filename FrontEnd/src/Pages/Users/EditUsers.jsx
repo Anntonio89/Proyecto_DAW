@@ -54,6 +54,13 @@ function EditUser() {
             
         } catch (error) {
             console.error('Error al actualizar el usuario:', error)
+            Swal.fire({
+                title: 'Error',
+                text: 'No se pudo actualizar el usuario.',
+                icon: 'error',
+                confirmButtonColor: '#d33',
+                confirmButtonText: 'Reintentar'
+            })
         }
     }
 
