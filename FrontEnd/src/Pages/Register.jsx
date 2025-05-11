@@ -23,7 +23,7 @@ function Register() {
     const validatePassword = () => {
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W]).{8,}$/
         if (!passwordRegex.test(form.password)) {
-        setPasswordError('La contraseña debe tener 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.')
+            setPasswordError('La contraseña debe tener 8 caracteres, una mayúscula, una minúscula, un número y un carácter especial.')
         return false
         }
         setPasswordError("")
@@ -74,8 +74,8 @@ function Register() {
             <input name='password' value={form.password} type='password' onChange={handleChange} placeholder='Contraseña' required/>
             {passwordError && <small className="text-danger" style={{backgroundColor:'black', color:'#d1006a' }}>{passwordError}</small>}
             <input name='altura' value={form.altura} type='number' onChange={handleChange} placeholder='Altura (m)' required/>
-            <input name='peso' value={form.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' required/>
-            <input name='edad' value={form.edad} type='number' onChange={handleChange} placeholder='Edad' required/>
+            <input name='peso' value={form.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' min='0' required/>
+            <input name='edad' value={form.edad} type='number' onChange={handleChange} placeholder='Edad' min='16' required/>
             <select name='sexo' value={form.sexo} onChange={handleChange}>
                 <option value='' disabled>Sexo</option>
                 <option value='Hombre'>Hombre</option>

@@ -66,51 +66,53 @@ function PlanList() {
     }
 
     return (
-        <div className='container exercice-Container mt-4'>
-            <NavLink to={`/createPlan`}>
-                <button className='btn-custom-edit'>CREAR PLAN</button>
-            </NavLink>
-            <NavLink to={`/detailsList`}>
-                <button className='btn-custom-edit'>VER DETALLES</button>
-            </NavLink>
-            {plan.length>0?(
-                <table className='table table text-center'>
-                    <thead className='thead-dark'>
-                        <tr>
-                            <th>ID</th>
-                            <th>Entrenador</th>
-                            <th>Plan</th>
-                            <th>Nivel</th>
-                            <th>Fecha Creación</th>
-                            <th>Fecha Modificación</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {plan.map((plan)=>(
-                        <tr key={plan.id}>
-                            <td>{plan.id}</td>
-                            <td>{plan.id_entrenador}</td>
-                            <td>{plan.plan}</td>
-                            <td>{plan.nivel}</td>
-                            <td>{new Date(plan.createdDate).toLocaleDateString()}</td>
-                            <td>{new Date(plan.modifiedDate).toLocaleDateString()}</td>
-                            <td>
-                            <NavLink to={`/planDetails/${plan.id}`}>
-                                <button className='btn-custom-delete'>Detalles</button>
-                            </NavLink>
-                            <NavLink to={`/planEdit/${plan.id}`}>
-                                <button className='btn-custom-edit'>Editar</button>
-                            </NavLink>
-                                <button className='btn-custom-delete'onClick={()=>handleDelete(plan.id)}>Eliminar</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-                </table>                
-            ):(
-                <p>No hay planes disponibles</p>
-            )}
-            
+        <div className='List'>
+            <div className='container exercice-Container mt-4'>
+                <NavLink to={`/createPlan`}>
+                    <button className='btn-custom-edit'>CREAR PLAN</button>
+                </NavLink>
+                <NavLink to={`/detailsList`}>
+                    <button className='btn-custom-edit'>VER DETALLES</button>
+                </NavLink>
+                {plan.length>0?(
+                    <table className='table table text-center'>
+                        <thead className='thead-dark'>
+                            <tr>
+                                <th>ID</th>
+                                <th>Entrenador</th>
+                                <th>Plan</th>
+                                <th>Nivel</th>
+                                <th>Fecha Creación</th>
+                                <th>Fecha Modificación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {plan.map((plan)=>(
+                            <tr key={plan.id}>
+                                <td>{plan.id}</td>
+                                <td>{plan.id_entrenador}</td>
+                                <td>{plan.plan}</td>
+                                <td>{plan.nivel}</td>
+                                <td>{new Date(plan.createdDate).toLocaleDateString()}</td>
+                                <td>{new Date(plan.modifiedDate).toLocaleDateString()}</td>
+                                <td>
+                                <NavLink to={`/planDetails/${plan.id}`}>
+                                    <button className='btn-custom-delete'>Detalles</button>
+                                </NavLink>
+                                <NavLink to={`/planEdit/${plan.id}`}>
+                                    <button className='btn-custom-edit'>Editar</button>
+                                </NavLink>
+                                    <button className='btn-custom-delete'onClick={()=>handleDelete(plan.id)}>Eliminar</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    </table>                
+                ):(
+                    <p>No hay planes disponibles</p>
+                )}
+                
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import axiosClient from '../../utils/function'
 import storage from '../../utils/storage'
 
@@ -23,21 +23,45 @@ function PlanUser() {
     }, [user])
 
     return (
-        <div className='plan-details-container'>
-            <h1 className='plan-details-titulo'>Plan de entrenamiento de {user.nombre}</h1>
-            {plans.length>0 ? (
-                plans.map((plan) =>(
-                <div key={plan.id} className='plan-card'>
-                    <p><strong>Nivel:</strong> {plan.nivel}</p>
-                    <p><strong>Nombre: </strong> {plan.plan}</p>
-                    <Link to={`/planDetails/${plan.id}`} className='btn-ver-detalles'>
-                        Ver detalles del plan
-                    </Link>
-                </div>
-                ))
-                ) : (
-                <p>No tienes un plan asignado todavía.</p>
-                )}
+        <div className='details-Container'>
+            <h1 className='details-Titulo'>Planes de {user.nombre}</h1>
+            <div className='details-Card'>
+                {plans.length>0 ? (
+                    plans.map((plan) =>(
+                    <div key={plan.id} className='progres-card'>  
+                     <div className='progres-card destacada'>                    
+                        <p style={
+                            {   fontSize:'40px',
+                                fontWeight:'bold',
+                            }}>Plan</p>
+                        <p><strong>Nivel:</strong>{plan.nivel}</p>
+                        <p><strong>Nombre:</strong>{plan.plan}</p>
+                        <Link to={`/planDetails/${plan.id}`} className='user-Progres' 
+                            style={
+                            {
+                                color:'#d1006a',
+                                textDecoration:'none',
+                                fontWeight:'bold',
+                                marginBottom:'20px',
+                            }}>
+                            Ver detalles del plan
+                        </Link>
+                    </div>
+                    </div>
+                    ))
+                    ) : (
+                    <p>No tienes un plan asignado todavía.</p>
+                    )}
+                <div style={
+                    {   display:'flex',
+                        justifyContent:'center',
+                        marginTop:'20px',
+                    }}>
+                
+                    <NavLink to='/login' className='link-Error'>Volver</NavLink>
+
+                </div>    
+            </div>
         </div>
     )
 }

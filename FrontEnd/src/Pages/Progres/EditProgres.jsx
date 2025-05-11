@@ -7,6 +7,7 @@ function EditProgres() {
 
     const {id}=useParams()
     const [progres, setProgres] =useState(null)
+    const [planes, setPlanes]=useState([])
     const navigate = useNavigate()
     
     useEffect(()=>{
@@ -21,6 +22,20 @@ function EditProgres() {
         }
         fetch()
     },[id])
+
+    useEffect(() => {
+        const fetchPlanes = async () => {
+            try {
+                const res= await axiosClient.get('http://localhost:3015/plan')
+                console.log('Planes', res.data)
+                setPlanes(res.data)
+            }
+            catch (error) {
+                console.error(error)
+            }
+        }
+        fetchPlanes()
+    }, [])
 
     const handleChange=(e)=>{
         const{name, value}=e.target //Se extrae el nombre y el value del campo
@@ -62,17 +77,27 @@ function EditProgres() {
     }
        
     return (
-        <div className='progresEdit-Container'>
-            <h1 className='progresEdit-Titulo'>Editar Progreso</h1>
-            <form onSubmit={handleSubmit} className='progresEdit-Form'>
-                <input name='id_usuario' value={progres.id_usuario} onChange={handleChange} placeholder='ID Usuario' required />
-                <input name='nombre_usuario' value={progres.nombre_usuario} onChange={handleChange} placeholder='Nombre Usuario' required />
-                <input name='id_plan' value={progres.id_plan} onChange={handleChange} placeholder='ID Plan' required />
-                <input name='nombre_plan' value={progres.nombre_plan} onChange={handleChange} placeholder='Nombre Plan' required />
-                <input name='fecha' value={progres.fecha} onChange={handleChange} placeholder='Fecha' required />
-                <input name='peso' value={progres.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' required />
-                <input name='IMC' value={progres.IMC} type='number' onChange={handleChange} placeholder='IMC' required />
-                <input name='indice_grasa' value={progres.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' required />
+        <div className='create-Container'>
+            <h1 className='create-Titulo'>Editar Progreso {progres.nombre_usuario}</h1>
+            <form onSubmit={handleSubmit} className='create-Form'>
+                {/* <input name='id_usuario' value={progres.id_usuario} onChange={handleChange} placeholder='ID Usuario' required /> */}
+                {/* <input name='nombre_usuario' value={progres.nombre_usuario} onChange={handleChange} placeholder='Nombre Usuario' required /> */}
+                {/* <input name='id_plan' value={progres.id_plan} onChange={handleChange} placeholder='ID Plan' required /> */}
+                {/* <label>Plan: <input name='nombre_plan' value={progres.nombre_plan} onChange={handleChange} placeholder='Nombre Plan' required /></label> */}
+                <label>Plan:
+                    <select name='id_plan' value={progres.id_plan} onChange={handleChange} required>
+                        <option value='' disabled>Selecciona un plan</option>
+                        {planes.map((p)=>(
+                            <option value={p.id} key={p.id}>
+                                {p.plan}
+                            </option>   
+                        ))}
+                    </select>
+                </label>
+                {/* <input name='fecha' value={progres.fecha} onChange={handleChange} placeholder='Fecha' required /> */}
+                <label>Peso: <input name='peso' value={progres.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' required /></label>
+                <label>IMC: <input name='IMC' value={progres.IMC} type='number' onChange={handleChange} placeholder='IMC' required /></label>
+                <label>% Grasa: <input name='indice_grasa' value={progres.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' required /></label>
                 <textarea name='observaciones' value={progres.observaciones} onChange={handleChange} placeholder='Observaciones (opcional)' />
                 <button type='submit' className='register-Button'>Guardar Cambios</button>
             </form>

@@ -66,48 +66,47 @@ function DetailList() {
     }
 
     return (
-        <div className='container exercice-Container mt-4'>
-            <NavLink to={`/createDetails`}>
-                <button className='btn-custom-edit'>CREAR DETALLE</button>
-            </NavLink>
-            {detail.length>0?(
-                <table className='table table text-center'>
-                    <thead className='thead-dark'>
-                        <tr>
-                            <th>ID</th>
-                            <th>Ejercicio</th>
-                            <th>Dia Semana</th>
-                            <th>Series</th>
-                            <th>Repeticiones</th>
-                            <th>Descanso</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {detail.map((detail)=>(
-                        <tr key={detail.id}>
-                            <td>{detail.id_plan}</td>
-                            <td>{detail.id_ejercicio}</td>
-                            <td>{detail.dia_semana}</td>
-                            <td>{detail.series}</td>
-                            <td>{detail.repeticiones}</td>
-                            <td>{detail.descanso}</td>
-                            <td>
-                            <NavLink to={`/detailDetails/${detail.id}`}>
-                                <button className='btn-custom-delete'>Detalles</button>
-                            </NavLink>
-                            <NavLink to={`/detailEdit/${detail.id}`}>
-                                <button className='btn-custom-edit'>Editar</button>
-                            </NavLink>
-                                <button className='btn-custom-delete'onClick={()=>handleDelete(detail.id)}>Eliminar</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-                </table>                
-            ):(
-                <p>No hay detalles disponibles</p>
-            )}
-            
+        <div className='List'>
+            <div className='container exercice-Container mt-4'>
+                <NavLink to={`/createDetails`}>
+                    <button className='btn-custom-edit'>CREAR DETALLE</button>
+                </NavLink>
+                {detail.length>0?(
+                    <table className='table table text-center'>
+                        <thead className='thead-dark'>
+                            <tr>
+                                <th>Plan</th>
+                                <th>Ejercicio</th>
+                                <th>Dia Semana</th>
+                                <th>Series</th>
+                                <th>Repeticiones</th>
+                                <th>Descanso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {detail.map((detail)=>(
+                            <tr key={detail.id}>
+                                <td>{detail.id_plan}</td>
+                                <td>{detail.id_ejercicio}</td>
+                                <td>{detail.dia_semana}</td>
+                                <td>{detail.series}</td>
+                                <td>{detail.repeticiones}</td>
+                                <td>{detail.descanso}</td>
+                                <td>
+                                <NavLink to={`/detailEdit/${detail.id}`}>
+                                    <button className='btn-custom-edit'>Editar</button>
+                                </NavLink>
+                                    <button className='btn-custom-delete'onClick={()=>handleDelete(detail.id)}>Eliminar</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    </table>                
+                ):(
+                    <p>No hay detalles disponibles</p>
+                )}
+                
+            </div>
         </div>
     )
 }

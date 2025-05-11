@@ -8,7 +8,7 @@ const rutasProtegidasMW=require('../middlewares/rutasProtegidas.mw')
 
 router.post('/login',userController.login)
 router.get('/logout',userController.logout)
-router.get('/', jwtMW.authenticate, rutasProtegidasMW.requireAdmin, userController.findAllUsers)
+router.get('/', jwtMW.authenticate, rutasProtegidasMW.requireCoach, userController.findAllUsers)
 router.get('/:id', jwtMW.authenticate, rutasProtegidasMW.requireAdmin, userController.findUserById)
 router.post('/', userController.createUser)
 router.put('/:id',jwtMW.authenticate, rutasProtegidasMW.requireAdmin,userController.updateUser)

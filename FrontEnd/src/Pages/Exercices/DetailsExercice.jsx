@@ -21,8 +21,8 @@ function DetailsExercice() {
     },[id])
 
     return (
-        <div className='exer-details-Container'>
-            <div className='exer-details-Card'>
+        <div className='details-Container'>
+            <div className='details-Card'>
                 {exercice ? (
                         <div>
                             <h2><strong>{exercice.nombre}</strong></h2>

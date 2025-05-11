@@ -79,9 +79,9 @@ function EditExercice() {
     }
        
     return (
-        <div className='exerciceEdit-Container'>
-            <h1 className='exerciceEdit-Titulo'>Editar Ejercicio</h1>
-            <form onSubmit={handleSubmit} className='exerciceEdit-Form'>
+        <div className='create-Container'>
+            <h1 className='create-Titulo'>Editar Ejercicio</h1>
+            <form onSubmit={handleSubmit} className='create-Form'>
                 <input type="text" name="nombre" value={exercice.nombre} onChange={handleChange} placeholder="Nombre" required/>
                 <input type="text" name="categoria" value={exercice.categoria} onChange={handleChange} placeholder="Categoria" required/>
                 <input type="text" name="grupo_muscular" value={exercice.grupo_muscular} onChange={handleChange} placeholder="Grupo Muscular" required/>

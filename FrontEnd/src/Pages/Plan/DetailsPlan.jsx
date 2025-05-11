@@ -36,41 +36,43 @@ function DetailsPlan() {
   if (!plan) return <p className="text-center">Cargando detalles del plan...</p>
 
   return (
-    <div className="container mt-4">
-      <h2>{plan.plan}</h2>
-      <p><strong>Nivel:</strong> {plan.nivel}</p>
-      <table className="table text-center">
-        <thead>
-          <tr>
-            <th>Día</th>
-            <th>Ejercicio</th>
-            <th></th>
-            <th>Series</th>
-            <th>Reps</th>
-            <th>Descanso (s)</th>
-            <th>Grupo Muscular</th>
-          </tr>
-        </thead>
-        <tbody>
-          {plan.detalles.map((detalle) => (
-            <tr key={detalle.id}>
-              <td>{detalle.dia_semana}</td>
-              <td>{detalle.ejercicio.nombre}</td>
-              <td>
-                  <img 
-                    src={`http://localhost:3015/img_uploaded/${detalle.ejercicio.imagen}`} 
-                    alt={detalle.ejercicio.nombre} 
-                    style={{ maxWidth: '60px', height: 'auto' }} 
-                    />
-              </td>
-              <td>{detalle.series}</td>
-              <td>{detalle.repeticiones}</td>
-              <td>{detalle.descanso}</td>
-              <td>{detalle.ejercicio.grupo_muscular}</td>              
+    <div className='List'>
+      <div className="container mt-4">
+        <h2>{plan.plan}</h2>
+        <p><strong>Nivel:</strong> {plan.nivel}</p>
+        <table className="table text-center">
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Ejercicio</th>
+              <th></th>
+              <th>Series</th>
+              <th>Reps</th>
+              <th>Descanso (s)</th>
+              <th>Grupo Muscular</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {plan.detalles.map((detalle) => (
+              <tr key={detalle.id}>
+                <td>{detalle.dia_semana}</td>
+                <td>{detalle.ejercicio.nombre}</td>
+                <td>
+                    <img 
+                      src={`http://localhost:3015/img_uploaded/${detalle.ejercicio.imagen}`} 
+                      alt={detalle.ejercicio.nombre} 
+                      style={{ maxWidth: '60px', height: 'auto' }} 
+                      />
+                </td>
+                <td>{detalle.series}</td>
+                <td>{detalle.repeticiones}</td>
+                <td>{detalle.descanso}</td>
+                <td>{detalle.ejercicio.grupo_muscular}</td>              
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   )
 }

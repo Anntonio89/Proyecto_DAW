@@ -62,9 +62,9 @@ function EditUser() {
     }
        
     return (
-        <div className='userEdit-Container'>
-            <h1 className='userEdit-Titulo'>Editar usuario</h1>
-            <form onSubmit={handleSubmit} className='userEdit-Form'>
+        <div className='create-Container'>
+            <h1 className='create-Titulo'>Editar usuario</h1>
+            <form onSubmit={handleSubmit} className='create-Form'>
                 <input name='nombre' value={user.nombre} onChange={handleChange} placeholder='Nombre' required/>
                 <input name='apellidos' value={user.apellidos} onChange={handleChange} placeholder='Apellidos' required/>
                 <input name='email' value={user.email} type='email' onChange={handleChange} placeholder='Email' required/>

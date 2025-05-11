@@ -24,16 +24,16 @@ function ExerciceRut() {
     let intervalo
     if (!pause) {
       intervalo = setInterval(() => {
-        setSegundos(prev => {
-          if (prev > 0) return prev - 1
-          if (minutos > 0) {
-            setMinutos(prevMin => prevMin - 1)
-            return 59
+        setSegundos(prevSeg => {
+          if (prevSeg > 0){
+             return prevSeg - 1
+          } else if (minutos > 0) {
+            setMinutos(prevMin => prevMin-1)
+            setSegundos (59)
           } else {
-            const siguienteFase = !fase
-            setFase(siguienteFase)
-            setMinutos(siguienteFase ? 10 : 3)
-            return 0
+            setFase(!fase)
+            setMinutos(fase ? 2 : 10)
+            setSegundos(0)
           }
         })
       }, 1000)

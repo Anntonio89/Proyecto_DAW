@@ -7,13 +7,14 @@ let Progres = function(progreso){
     //Atributos del progreso
     //id (auto incremental)
     this.id_usuario=progreso.id_usuario
+    this.nombre_usuario=progreso.nombre_usuario
     this.id_plan=progreso.id_plan
+    this.nombre_plan=progreso.nombre_plan
     this.fecha=new Date()
     this.peso=progreso.peso
     this.IMC=progreso.IMC
     this.indice_grasa=progreso.indice_grasa
-    this.observaciones=progreso.observaciones
-    
+    this.observaciones=progreso.observaciones    
 }
 
 //Metodos del modelo

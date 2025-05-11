@@ -9,7 +9,7 @@ import Error from './Pages/Error'
 import Login from './Pages/Login'
 import Register from './Pages/Register'
 import Services from './Pages/Services'
-import ExercicesFun from './Pages/ExercicesFun'
+import Contact from './Pages/Contact'
 import ProgresList from './Pages/Progres/ProgresList'
 import CreateProgres from './Pages/Progres/CreateProgres'
 import DetailsProgres from './Pages/Progres/DetailsProgres'
@@ -40,9 +40,9 @@ function App() {
         {/* Rutas publicas */}
         <Route path='/' element={<Home/>}/>
         <Route path='/services' element={<Services/>}/>
-        <Route path='/exerciceFun' element={<ExercicesFun/>}/>
         <Route path="/users" element={<Register/>}/>
         <Route path="/login" element={<Login />} />   
+        <Route path='/contact' element={<Contact/>}/>
         <Route element={<ProtectedRoutes rolPermitido={['USUARIO','ENTRENADOR', 'ADMIN']}/>}>
           <Route path='/details-progres' element={<DetailsProgres/>}/>
           <Route path='/exerciceRutina' element={<ExerciceRut/>}/>  

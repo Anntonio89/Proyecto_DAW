@@ -31,9 +31,9 @@ function DetailsProgres() {
 
 
     return (
-        <div className='progres-details-Container'>
-            <h1 className='progres-details-Titulo'>Progreso {user.nombre}</h1>
-            <div className='progres-details-Card'>
+        <div className='details-Container'>
+            <h1 className='details-Titulo'>Progreso {user.nombre}</h1>
+            <div className='details-Card'>
            
                     {progreso.length > 0 ? (
                      progreso
@@ -52,7 +52,15 @@ function DetailsProgres() {
                         <p>No hay registros</p>
                     )}
                 
-                <NavLink to='/login' className='link-Error'>Volver</NavLink>
+                <div style={
+                    {   display:'flex',
+                        justifyContent:'center',
+                        marginTop:'20px',
+                    }}>
+                
+                    <NavLink to='/login' className='link-Error'>Volver</NavLink>
+
+                </div>  
             </div>
         </div>
     )

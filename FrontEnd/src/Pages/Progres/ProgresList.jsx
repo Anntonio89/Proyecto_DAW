@@ -42,7 +42,7 @@ function ProgresList() {
         }).then(async (result) => {
             if (result.isConfirmed) {
                 try {
-                    await axios.delete(`http://localhost:3015/progres/${id}`)
+                    await axiosClient.delete(`http://localhost:3015/progres/${id}`)
                     setProgres(prev => prev.filter(e => e.id !== id))
                     Swal.fire({
                         title: 'Eliminado',
@@ -66,48 +66,54 @@ function ProgresList() {
     }
 
     return (
-        <div className='container exercice-Container mt-4'>
-            {progres.length>0?(
-                <table className='table table text-center'>
-                    <thead className='thead-dark'>
-                        <tr>
-                            <th>ID Usuario</th>
-                            <th>Usuario</th>
-                            <th>ID Plan</th>
-                            <th>Plan</th>
-                            <th>Fecha</th>
-                            <th>Peso (Kg)</th>
-                            <th>IMC</th>
-                            <th>Grasa (%)</th>
-                            <th>Observaciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {progres.map((progres)=>(
-                        <tr key={progres.id}>
-                            <td>{progres.id_usuario}</td>
-                            <td>{progres.nombre_usuario}</td>
-                            <td>{progres.id_plan}</td>
-                            <td>{progres.nombre_plan}</td>
-                            <td>{new Date(progres.fecha).toLocaleDateString()}</td>
-                            <td>{progres.peso}</td>
-                            <td>{progres.IMC}</td>
-                            <td>{progres.indice_grasa}</td>
-                            <td>{progres.observaciones}</td>
-                            <td>
-                            <NavLink to={`/progresEdit/${progres.id}`}>
-                                <button className='btn-custom-edit'>Editar</button>
-                            </NavLink>
-                                <button className='btn-custom-delete'onClick={()=>handleDelete(progres.id)}>Eliminar</button>
-                            </td>
-                        </tr>
-                    ))}
-                </tbody>
-                </table>
-            ):(
-                <p>No hay progresos disponibles</p>
-            )}
-            
+        <div className='List'>
+            <div className='container exercice-Container mt-4'>
+            <NavLink to={`/progresCreate`}>
+                    <button className='btn-custom-edit'>CREAR PROGRESO</button>
+                </NavLink>
+               
+                {progres.length>0?(
+                    <table className='table table text-center'>
+                        <thead className='thead-dark'>
+                            <tr>
+                                <th>ID Usuario</th>
+                                <th>Usuario</th>
+                                <th>ID Plan</th>
+                                <th>Plan</th>
+                                <th>Fecha</th>
+                                <th>Peso (Kg)</th>
+                                <th>IMC</th>
+                                <th>Grasa (%)</th>
+                                <th>Observaciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {progres.map((progres)=>(
+                            <tr key={progres.id}>
+                                <td>{progres.id_usuario}</td>
+                                <td>{progres.nombre_usuario}</td>
+                                <td>{progres.id_plan}</td>
+                                <td>{progres.nombre_plan}</td>
+                                <td>{new Date(progres.fecha).toLocaleDateString()}</td>
+                                <td>{progres.peso}</td>
+                                <td>{progres.IMC}</td>
+                                <td>{progres.indice_grasa}</td>
+                                <td>{progres.observaciones}</td>
+                                <td>
+                                <NavLink to={`/progresEdit/${progres.id}`}>
+                                    <button className='btn-custom-edit'>Editar</button>
+                                </NavLink>
+                                    <button className='btn-custom-delete'onClick={()=>handleDelete(progres.id)}>Eliminar</button>
+                                </td>
+                            </tr>
+                        ))}
+                    </tbody>
+                    </table>
+                ):(
+                    <p>No hay progresos disponibles</p>
+                )}
+                
+            </div>
         </div>
     )
 }

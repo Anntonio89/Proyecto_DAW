@@ -133,14 +133,21 @@ function Login() {
                               textDecoration:'none',
                               fontWeight:'bold',
                             }}>
-                      Ver Progresos
+                      Gestionar Progresos
                   </Link>
                   <Link to='/planList' className='user-Progres' 
                       style={{color:'#d1006a',
                               textDecoration:'none',
                               fontWeight:'bold',
                             }}>
-                      Ver Planes
+                      Gestionar Planes
+                  </Link>
+                  <Link to='/exerciceList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Gestionar Ejercicios
                   </Link>
                 </>
               )}
@@ -152,21 +159,28 @@ function Login() {
                               textDecoration:'none',
                               fontWeight:'bold',
                             }}>
-                      Ver Progresos
+                      Gestionar Progresos
                   </Link>
                   <Link to='/planList' className='user-Progres' 
                       style={{color:'#d1006a',
                               textDecoration:'none',
                               fontWeight:'bold',
                             }}>
-                      Ver Planes
+                      Gestionar Planes
+                  </Link>
+                  <Link to='/exerciceList' className='user-Progres' 
+                      style={{color:'#d1006a',
+                              textDecoration:'none',
+                              fontWeight:'bold',
+                            }}>
+                      Gestionar Ejercicios
                   </Link>
                   <Link to='/usersList' className='user-Progres' 
                       style={{color:'#d1006a',
                               textDecoration:'none',
                               fontWeight:'bold',
                             }}>
-                      Ver Usuarios
+                      Gestionar Usuarios
                   </Link>
                 </>
               )}
