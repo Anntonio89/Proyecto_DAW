@@ -4,17 +4,19 @@ import axiosClient from '../../utils/function'
 import storage from '../../utils/storage'
 import Swal from 'sweetalert2'
 
-function ExerciceList() {
+function ExerciceList({filtro}) {
 
     const [exercices,setExercices]=useState([])
-    const [entrenador,setEntrenador]=useState(false)
+    const [modif,setModif]=useState(false)
+
+    const ejerciciosFiltrados = exercices.filter(e => e.nombre.toLowerCase().includes(filtro.toLowerCase()))
 
     useEffect(()=>{
 
         const user=storage.get('authUser')
 
-        if(user.rol==='ENTRENADOR'){
-            setEntrenador(true)
+        if(user.rol==='ENTRENADOR' || user.rol==='ADMIN'){
+            setModif(true)
         }
 
         const fetchEjercicios=async()=>{
@@ -82,7 +84,7 @@ function ExerciceList() {
                         <tr>
                             <th>Ejercicios</th>
                             <th></th>
-                            {entrenador && (
+                            {modif && (
                                 <th>                               
                                     <NavLink to={`/exerciceCreate`}>
                                         <button className='btn-custom-edit'>CREAR EJERCICIO</button>
@@ -92,7 +94,7 @@ function ExerciceList() {
                         </tr>
                     </thead>
                     <tbody>
-                        {exercices.map((exercices)=>(
+                        {ejerciciosFiltrados.map((exercices)=>(
                         <tr key={exercices.id}>
                             <td>  
                                 <NavLink to={`/exerciceDetail/${exercices.id}`} className={({ isActive }) => (isActive ? 'active' : '')}>
@@ -100,7 +102,7 @@ function ExerciceList() {
                                 </NavLink> 
                             </td>
                             <td>{exercices.nombre}</td>
-                            {entrenador && (
+                            {modif && (
                                 <td>
                                 <NavLink to={`/exerciceEdit/${exercices.id}`}>
                                     <button className='btn-custom-edit'>Editar</button>

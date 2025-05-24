@@ -50,7 +50,7 @@ function PlanUser() {
                     </div>
                     ))
                     ) : (
-                    <p>No tienes un plan asignado todavía.</p>
+                    <p>No tiene un plan asignado todavía. Póngase en contacto con su entrenador personal</p>
                     )}
                 <div style={
                     {   display:'flex',

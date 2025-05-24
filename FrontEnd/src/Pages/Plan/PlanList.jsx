@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
-function PlanList() {
+function PlanList({filtro}) {
 
     const [plan,setPlan]=useState([])
+    const planesFiltrados = plan.filter(e => e.nombre_usuario.toLowerCase().includes(filtro.toLowerCase()))
 
     useEffect(()=>{
         const fetchplan=async()=>{
@@ -80,6 +81,7 @@ function PlanList() {
                             <tr>
                                 <th>ID</th>
                                 <th>Entrenador</th>
+                                <th>Usuario</th>
                                 <th>Plan</th>
                                 <th>Nivel</th>
                                 <th>Fecha Creación</th>
@@ -87,10 +89,11 @@ function PlanList() {
                             </tr>
                         </thead>
                         <tbody>
-                            {plan.map((plan)=>(
+                            {planesFiltrados.map((plan)=>(
                             <tr key={plan.id}>
                                 <td>{plan.id}</td>
-                                <td>{plan.id_entrenador}</td>
+                                <td>{plan.nombre_entrenador}</td>
+                                <td>{plan.nombre_usuario}</td>
                                 <td>{plan.plan}</td>
                                 <td>{plan.nivel}</td>
                                 <td>{new Date(plan.createdDate).toLocaleDateString()}</td>

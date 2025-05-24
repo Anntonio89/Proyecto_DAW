@@ -49,7 +49,7 @@ function DetailsProgres() {
                         </div>
                       ))
                     ):(
-                        <p>No hay registros</p>
+                        <p>No hay progresos todavía. Póngase en contacto con su entrenador personal</p>
                     )}
                 
                 <div style={

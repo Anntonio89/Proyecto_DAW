@@ -32,10 +32,12 @@ import EditDetail from './Pages/Details/EditDetails'
 
 function App() {
 
+  const [filtro, setFiltro] = useState('')
+
   return (
     <>
     <Router>
-      <Header/>
+      <Header filtro={filtro} setFiltro={setFiltro}/>
       <Routes>
         {/* Rutas publicas */}
         <Route path='/' element={<Home/>}/>
@@ -47,7 +49,7 @@ function App() {
           <Route path='/details-progres' element={<DetailsProgres/>}/>
           <Route path='/exerciceRutina' element={<ExerciceRut/>}/>  
           <Route path='/planUser' element={<PlanUser/>}/> 
-          <Route path='/exerciceList' element={<ExerciceList/>}/>
+          <Route path='/exerciceList' element={<ExerciceList filtro={filtro}/>}/>
           <Route path='/exerciceDetail/:id' element={<DetailsExercice/>}/>
           <Route path="/planDetails/:id" element={<DetailsPlan />}/>
         </Route>
@@ -55,14 +57,14 @@ function App() {
          {/* Rutas protegidas con permiso solo para ENTRENADORES */}
         <Route element={<ProtectedRoutes rolPermitido={['ENTRENADOR', 'ADMIN']}/>}>
           {/* CRUD PROGRESOS */}
-          <Route path='/progresList' element={<ProgresList/>}/>
+          <Route path='/progresList' element={<ProgresList filtro={filtro}/>}/>
           <Route path='/progresCreate' element={<CreateProgres/>}/>
           <Route path='/progresEdit/:id' element={<EditProgres/>}/>
           {/* CRUD EJERCICIOS */}
           <Route path='/exerciceCreate' element={<CreateExercice/>}/>
           <Route path='/exerciceEdit/:id' element={<EditExercice/>}/>
           {/* CRUD PLANES */}
-          <Route path='/planList' element={<PlanList/>}/>
+          <Route path='/planList' element={<PlanList filtro={filtro}/>}/>
           <Route path='/createPlan' element={<CreatePlan/>}/>
           <Route path='/planEdit/:id' element={<EditPlan/>}/>
           {/* CRUD DETALLES */}
@@ -73,7 +75,7 @@ function App() {
         </Route>        
         {/* Rutas protegidas con permiso solo para ADMIN */}
         <Route element={<ProtectedRoutes rolPermitido={['ADMIN']}/>}>
-          <Route path='/usersList' element={<UsersList/>}/>
+          <Route path='/usersList' element={<UsersList filtro={filtro}/>}/>
           <Route path='/userEdit/:id' element={<EditUser/>}/>
         </Route>      
         <Route path='*' element={<Error/>}/>

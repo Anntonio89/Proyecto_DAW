@@ -28,6 +28,7 @@ User.findAll = async function(result){
     connection.connect((error)=>{
         if(error){
             console.log('Error con la conexión a MySQL. Des: ' + error)
+            result(error,null)
         }else{
             console.log('Conexión a MySQL abierta')
             const sql = 'SELECT * FROM usuarios'//SQL para obtener todos los usuarios
@@ -96,7 +97,7 @@ User.create = async function(newUser, result){
     connection.connect((error)=>{
         if(error){
             console.log('Error con la conexión a MySQL. Des: ' + error)
-            result(err,null)
+            result(error,null)
         }else{
             console.log('Conexión a MySQL abierta')
 
@@ -173,7 +174,7 @@ User.update = async function(idUser, updateUser, result){
     connection.connect((error)=>{
         if(error){
             console.log('Error con la conexión a MySQL. Des: ' + error)
-            result(err,null)
+            result(error,null)
         }else{
             console.log('Conexión a MySQL abierta')
             const sql = 'UPDATE usuarios SET ? WHERE id = ?'//SQL para obtener un usuario
@@ -205,7 +206,7 @@ User.delete = async function(idUser, result){
     connection.connect((error)=>{
         if(error){
             console.log('Error con la conexión a MySQL. Des: ' + error)
-            result(err,null)
+            result(error,null)
         }else{
             console.log('Conexión a MySQL abierta')
             const sql = 'DELETE FROM usuarios WHERE id = ?'//SQL para obtener un usuario

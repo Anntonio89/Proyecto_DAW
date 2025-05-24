@@ -95,7 +95,7 @@ function Login() {
                 <input type='email' value={email} onChange={e=>setEmail(e.target.value)} placeholder='Email' required/>
                 <input type='password' value={password} onChange={e=>setPassword(e.target.value)} placeholder='Contraseña' required/>
                 <button type='submit'>Iniciar Sesión</button>
-                <p>¿No tienes cuenta?<Link to="/users">Regístrate</Link></p>
+                <p style={{fontWeight:'bold'}}>¿No tienes cuenta?  <Link to="/users" style={{color:'white'}}>Regístrate</Link></p>
             </form>
           </div>
           ):(

@@ -26,7 +26,17 @@ Plan.findAll = async function(result){
             console.log('Error con la conexión a MySQL. Des: ' + error)
         }else{
             console.log('Conexión a MySQL abierta')
-            const sql = 'SELECT * FROM planes_entrenamiento'//SQL para obtener todos los planes_entrenamiento
+            const sql = `SELECT 
+                    p.id,
+                    p.plan,
+                    p.nivel,
+                    p.createdDate,
+                    p.modifiedDate,
+                    u.nombre AS nombre_usuario,
+                    e.nombre AS nombre_entrenador
+                FROM planes_entrenamiento p
+                JOIN usuarios u ON p.id_usuario = u.id
+                JOIN usuarios e ON p.id_entrenador = e.id`//SQL para obtener todos los planes_entrenamiento
             //Se ejecuta la consulta
             connection.query(sql, function(err, datos){//En caso de error se muestra el error, en caso contrario se devuelven los datos
                 if(err){

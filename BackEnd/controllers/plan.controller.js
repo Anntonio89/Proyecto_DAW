@@ -85,14 +85,14 @@ exports.findPlanWithDetails =wrapAsync(async function (req,res,next){
     })
 })
 
-//Buscar Progreso por un filtro (id_usuario)
+//Buscar plan por un filtro (id_usuario)
 exports.findByFilterUser=wrapAsync(async function(req,res,next){
     // console.log('HOLLAAAAAAAAAA')
     const id_usuario=req.user.id
     // console.log('ID USUARIO:',req.user)
     await planModel.findByFilter(id_usuario, function(err,datosPlan){
         if(err){
-           return  next(new AppError('Error al buscar el progreso por id_usuario',404))
+           return  next(new AppError('Error al buscar el plan por id_usuario',404))
         }else{
             res.status(200).json(datosPlan)
         }

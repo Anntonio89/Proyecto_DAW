@@ -12,7 +12,7 @@ function CreateDetail() {
     const navigate =useNavigate()
 
     const [form, setForm]=useState({
-        id_plan:''|| idPlan,
+        id_plan: idPlan || '',
         id_ejercicio:'',
         dia_semana:'',
         series:'',

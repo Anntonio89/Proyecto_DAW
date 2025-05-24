@@ -61,7 +61,7 @@ function Contact() {
                     checked={aceptaPoliticas}
                     onChange={e => setAceptaPoliticas(e.target.checked)}
                   />
-                  <label>Acepto las políticas de privacidad</label>
+                  <label style={{paddingLeft:'10px'}}>Acepto las políticas de privacidad</label>
                 </div>
                 <button type="submit" className="contacto-boton">ENVIAR</button>
               </form>

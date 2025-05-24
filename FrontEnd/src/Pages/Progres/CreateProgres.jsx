@@ -124,9 +124,9 @@ function CreateProgres() {
                     </option>   
                 ))}
             </select>
-            <input name='peso' value={form.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' min='0' required />
-            <input name='IMC' value={form.IMC} type='number' onChange={handleChange} placeholder='IMC' min='0' max='100'required />
-            <input name='indice_grasa' value={form.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' min='8' max='75' required />
+            <input name='peso' value={form.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' min='20' max='200' required />
+            <input name='IMC' value={form.IMC} type='number' onChange={handleChange} placeholder='IMC' min='15' max='50' required />
+            <input name='indice_grasa' value={form.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' min='1' max='100' required />
             {/* <input name='fecha' value={new Date().toLocaleDateString()} type='date' onChange={handleChange} placeholder='Fecha' required /> */}
             <textarea name='observaciones' value={form.observaciones} onChange={handleChange} placeholder='Observaciones (opcional)' />
             <button type='submit' className='progres-button'>Guardar Progreso</button>

@@ -86,13 +86,13 @@ exports.updateUser=wrapAsync(async function (req,res,next){
     const id=req.params.id
     const updateUser=new userModel(req.body)
 
-    // const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W]).{8,}$/
+    const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W]).{8,}$/
     // //(?=.*[a-z])-->Al menos una minuscula, (?=.*[A-Z])--> Al menos una mayúscula
     // //(?=.*\d)--> un número mínimo, (?=.*[\W])--> por lo menos un caracter especial, .{8}-->Longitud minima de 8 caracteres
 
-    // if(!regex.test(updateUser.password)){//Validacion
-    //     return next(new AppError("La contraseña debe incluir al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial.",400))
-    // }
+    if(!regex.test(updateUser.password)){//Validacion
+        return next(new AppError("La contraseña debe incluir al menos 8 caracteres, una letra mayúscula, una letra minúscula, un número y un carácter especial.",400))
+    }
 
     updateUser.password=await bcrypt.hashPassword(updateUser.password)//Se encripta la contraseña al crear al usuario nuevo
 

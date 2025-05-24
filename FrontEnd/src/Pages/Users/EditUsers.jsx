@@ -72,17 +72,27 @@ function EditUser() {
         <div className='create-Container'>
             <h1 className='create-Titulo'>Editar usuario</h1>
             <form onSubmit={handleSubmit} className='create-Form'>
-                <input name='nombre' value={user.nombre} onChange={handleChange} placeholder='Nombre' required/>
-                <input name='apellidos' value={user.apellidos} onChange={handleChange} placeholder='Apellidos' required/>
-                <input name='email' value={user.email} type='email' onChange={handleChange} placeholder='Email' required/>
-                <input name='password' value={user.password} type='password' onChange={handleChange} placeholder='Contraseña' required/>
-                <input name='edad' value={user.edad} type='number' onChange={handleChange} placeholder='Edad' required/>
-                <select name='sexo' value={user.sexo} onChange={handleChange}>
-                    <option value='' disabled>Sexo</option>
-                    <option value='Hombre'>Hombre</option>
-                    <option value='Mujer'>Mujer</option>
-                    <option value='Otro'>Otro</option>
-                </select>
+                <label>Nombre:<input name='nombre' value={user.nombre} onChange={handleChange} placeholder='Nombre' required/></label>
+                <label>Apellidos:<input name='apellidos' value={user.apellidos} onChange={handleChange} placeholder='Apellidos' required/></label>
+                <label>Email:<input name='email' value={user.email} type='email' onChange={handleChange} placeholder='Email' required/></label>
+                <label><input name='password' value={user.password} type='password' onChange={handleChange} placeholder='Contraseña' required/></label>
+                <label>Edad:<input name='edad' value={user.edad} type='number' onChange={handleChange} placeholder='Edad' required/></label>
+                <label>Sexo:
+                    <select name='sexo' value={user.sexo} onChange={handleChange}>
+                        <option value='' disabled>Sexo</option>
+                        <option value='Hombre'>Hombre</option>
+                        <option value='Mujer'>Mujer</option>
+                        <option value='Otro'>Otro</option>
+                    </select>
+                </label>
+                <label>Rol:
+                    <select name='rol' value={user.rol} onChange={handleChange}>
+                        <option value='' disabled>Rol</option>
+                        <option value='ADMIN'>Administrador</option>
+                        <option value='ENTRENADOR'>Entrenador</option>
+                        <option value='USUARIO'>Usuario</option>
+                    </select>
+                </label>
                 <button type='submit' className='register-Button'>Guardar Cambios</button>
             </form>
         </div>

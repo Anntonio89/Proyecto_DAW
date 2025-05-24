@@ -27,7 +27,10 @@ Detail.findAll = async function(result){
             console.log('Error con la conexión a MySQL. Des: ' + error)
         }else{
             console.log('Conexión a MySQL abierta')
-            const sql = 'SELECT * FROM detalles_plan'//SQL para obtener todos los detalles
+            const sql = `SELECT d.*, e.nombre as nombre_ejercicio, p.plan as nombre_plan             
+                        FROM detalles_plan d
+                        JOIN ejercicios e ON d.id_ejercicio = e.id 
+                        JOIN planes_entrenamiento p ON d.id_plan = p.id `//SQL para obtener todos los detalles
             //Se ejecuta la consulta
             connection.query(sql, function(err, datos){//En caso de error se muestra el error, en caso contrario se devuelven los datos
                 if(err){

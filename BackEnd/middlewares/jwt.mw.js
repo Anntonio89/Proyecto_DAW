@@ -49,7 +49,7 @@ exports.authenticate = (req,res,next)=>{
 
 exports.createJWT=(req,res,next,userData)=>{
     try{
-        const token = jwt.sign({userData},process.env.SECRET_KEY,{expiresIn:'1h'})//expira en 10 minutos
+        const token = jwt.sign({userData},process.env.SECRET_KEY,{expiresIn:'2h'})//expira en 2 horas
         if(token){
             return token
         }else{

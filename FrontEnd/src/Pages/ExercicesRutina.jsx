@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react'
 
 function ExerciceRut() {
   const [pause, setPause] = useState(true)
-  const [minutos, setMinutos] = useState(10)
-  const [segundos, setSegundos] = useState(0)
+  const [segundos, setSegundos] = useState(600)// 10 minutos de entrenamiento
   const [fase, setFase] = useState(true) // true = entrenamiento, false = descanso
 
   const [imagenIndex, setImagenIndex] = useState(0)
@@ -12,7 +11,8 @@ function ExerciceRut() {
   const images = [
     '/exercices/abdominales-asistidos-oblicuos.gif',
     '/exercices/abdominales crunch oblicuo.gif',
-    '/exercices/abdominales crunch piernas elevadas.gif'
+    '/exercices/abdominales crunch piernas elevadas.gif',
+    '/exercices/abdominales crunch.gif',
   ]
 
   const handlePause = () => {
@@ -26,57 +26,58 @@ function ExerciceRut() {
       intervalo = setInterval(() => {
         setSegundos(prevSeg => {
           if (prevSeg > 0){
-             return prevSeg - 1
-          } else if (minutos > 0) {
-            setMinutos(prevMin => prevMin-1)
-            setSegundos (59)
+             return prevSeg - 1          
           } else {
-            setFase(!fase)
-            setMinutos(fase ? 2 : 10)
-            setSegundos(0)
+            const nuevaFase = !fase
+            setFase(nuevaFase)
+            return nuevaFase ? 600 : 120 // 10 minutos de entrenamiento, 2 minutos de descanso
           }
         })
       }, 1000)
     }
     return () => clearInterval(intervalo)
-  }, [pause, minutos, fase])
+  }, [pause, fase])
 
   //Cambio de imagen cada 10 segundos
   useEffect(() => {
     let imageInterval
-    if (!pause) {
+    if (!pause && fase) {
       imageInterval = setInterval(() => {
         setImagenIndex(prev => (prev + 1) % images.length)
         setCuenta(10)
       }, 10000)
     }
     return () => clearInterval(imageInterval)
-  }, [pause])
+  }, [pause, fase])
 
   useEffect(() => {
     let cuentaInterval
-    if (!pause) {
+    if (!pause && fase) {
       cuentaInterval = setInterval(() => {
         setCuenta(prev => (prev > 1 ? prev - 1 : 1))
       }, 1000)
     }
     return () => clearInterval(cuentaInterval)
-  }, [pause])
+  }, [pause, fase])
+
+  const minutos = Math.floor(segundos / 60)
+  const segundosRestantes = segundos % 60
 
   return (
-    <div className='exercice-Rut-Container'>
-        <div className='container text-center mt-4'>
-            <h1 className='exer-Rut-Edit-Titulo'>Rutina Funcional</h1>
+        <div className='container text-center mt-4' style={{backgroundColor: 'white', padding: '40px', marginTop: 0}}>
+            <h1 style={{fontSize: '70px', fontStyle:'italic', color: '#d1006a'}}>{fase ? '¡A entrenar!' : 'Descanso'}</h1>
+            <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d1006a' }}>
+                {String(minutos).padStart(2, '0')}:{String(segundosRestantes).padStart(2, '0')}
+            </p>
             <button onClick={handlePause} className='btn-custom-ex-Rut'>
                 {pause ? 'Iniciar' : 'Pausar'}
-            </button>
-
-            <h2>{fase ? 'Fase: Entrenamiento' : 'Fase: Descanso'}</h2>
-
-            <p style={{ fontSize: '2rem', fontWeight: 'bold', color: '#d1006a' }}>
-                {String(minutos).padStart(2, '0')}:{String(segundos).padStart(2, '0')}
+            </button>            
+            <p 
+                style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: 'bold' }}>
+                  Siguiente ejercicio en: {cuenta}s
             </p>
 
+            {fase && (
             <div className='row justify-content-center'>
                 {images.map((img, index) => (
                 <div
@@ -85,26 +86,26 @@ function ExerciceRut() {
                     style={{
                       opacity: imagenIndex === index ? 1 : 0.2,
                       transform: imagenIndex === index ? 'scale(1.1)' : 'scale(0.95)',
-                      transition: 'all 0.5s ease-in-out'
+                      transition: 'all 0.5s ease-in-out',
+                      padding: '20px',
+                      margin: '15px',   
+                      borderRadius: '10px',
+                      boxShadow: '8px 8px 8px 8px rgba(0, 0, 0, 0.2)'
                     }}
                 >
                     <img
                     src={img}
                     alt={`Ejercicio ${index}`}
                     className='img-fluid custom-img'
-                    style={{ maxHeight: '250px', objectFit: 'contain' }}
-                    />
-                    {imagenIndex === index && (
-                    <p style={{ fontSize: '1.5rem', marginTop: '10px', fontWeight: 'bold' }}>
-                        Cambia en: {cuenta}
-                    </p>
-                    )}
-                </div>
+                    style={{ maxHeight: '300px',
+                              objectFit: 'contain',
+                            }}
+                    />    
+                 </div>
                 ))}
             </div>
-            
+            )}
         </div>
-    </div>
   )
 }
 

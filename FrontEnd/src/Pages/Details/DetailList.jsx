@@ -69,7 +69,7 @@ function DetailList() {
         <div className='List'>
             <div className='container exercice-Container mt-4'>
                 <NavLink to={`/createDetails`}>
-                    <button className='btn-custom-edit'>CREAR DETALLE</button>
+                    <button className='btn-custom-edit'>ASIGNAR A PLAN</button>
                 </NavLink>
                 {detail.length>0?(
                     <table className='table table text-center'>
@@ -86,8 +86,8 @@ function DetailList() {
                         <tbody>
                             {detail.map((detail)=>(
                             <tr key={detail.id}>
-                                <td>{detail.id_plan}</td>
-                                <td>{detail.id_ejercicio}</td>
+                                <td>{detail.nombre_plan}</td>
+                                <td>{detail.nombre_ejercicio}</td>
                                 <td>{detail.dia_semana}</td>
                                 <td>{detail.series}</td>
                                 <td>{detail.repeticiones}</td>

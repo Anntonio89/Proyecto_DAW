@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
-function ProgresList() {
+function ProgresList({filtro}) {
 
     const [progres,setProgres]=useState([])
+    const progresosFiltrados = progres.filter(e => e.nombre_usuario.toLowerCase().includes(filtro.toLowerCase()))
 
     useEffect(()=>{
         const fetchprogres=async()=>{
@@ -88,7 +89,7 @@ function ProgresList() {
                             </tr>
                         </thead>
                         <tbody>
-                            {progres.map((progres)=>(
+                            {progresosFiltrados.map((progres)=>(
                             <tr key={progres.id}>
                                 <td>{progres.id_usuario}</td>
                                 <td>{progres.nombre_usuario}</td>

@@ -89,11 +89,11 @@ function EditExercice() {
         <div className='create-Container'>
             <h1 className='create-Titulo'>Editar Ejercicio</h1>
             <form onSubmit={handleSubmit} className='create-Form'>
-                <input type="text" name="nombre" value={exercice.nombre} onChange={handleChange} placeholder="Nombre" required/>
-                <input type="text" name="categoria" value={exercice.categoria} onChange={handleChange} placeholder="Categoria" required/>
-                <input type="text" name="grupo_muscular" value={exercice.grupo_muscular} onChange={handleChange} placeholder="Grupo Muscular" required/>
-                <input type="text" name="nivel" value={exercice.nivel} onChange={handleChange} placeholder="Nivel" required/>
-                <textarea name="descripcion" value={exercice.descripcion} onChange={handleChange} placeholder="Descripción" />                
+                <label>Nombre Ejercicio:<input type="text" name="nombre" value={exercice.nombre} onChange={handleChange} placeholder="Nombre" required/></label>
+                <label>Categoría:<input type="text" name="categoria" value={exercice.categoria} onChange={handleChange} placeholder="Categoria" required/></label>
+                <label>Grupo Muscular:<input type="text" name="grupo_muscular" value={exercice.grupo_muscular} onChange={handleChange} placeholder="Grupo Muscular" required/></label>
+                <label>Nivel:<input type="text" name="nivel" value={exercice.nivel} onChange={handleChange} placeholder="Nivel" required/></label>
+                <label>Descripción:<textarea name="descripcion" value={exercice.descripcion} onChange={handleChange} placeholder="Descripción" /></label>                
                 <div className='exerciceEdit-img'>
                     <input type="file" name="imagen" onChange={handleChangeFile} accept='image/*' style={{maxWidth:'150px', marginTop:'5px'}}/>
                     <img src={img} alt="imagen" style={{maxWidth:'150px', marginTop:'5px'}}/>

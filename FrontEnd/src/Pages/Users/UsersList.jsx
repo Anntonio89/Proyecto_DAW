@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 import axiosClient from '../../utils/function'
 import Swal from 'sweetalert2'
 
-function UsersList() {
+function UsersList({filtro}) {
 
     const [users,setUsers]=useState([])
+    const usersFiltrados = users.filter(e => e.nombre.toLowerCase().includes(filtro.toLowerCase()))
 
     useEffect(()=>{
         const fetchUsers=async()=>{
@@ -81,7 +82,7 @@ function UsersList() {
                             </tr>
                         </thead>
                         <tbody>
-                            {users.map((users)=>(
+                            {usersFiltrados.map((users)=>(
                             <tr key={users.id}>
                                 <td>{users.nombre}</td>
                                 <td>{users.apellidos}</td>

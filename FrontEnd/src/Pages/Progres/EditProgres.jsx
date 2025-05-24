@@ -102,9 +102,9 @@ function EditProgres() {
                     </select>
                 </label>
                 {/* <input name='fecha' value={progres.fecha} onChange={handleChange} placeholder='Fecha' required /> */}
-                <label>Peso: <input name='peso' value={progres.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' required /></label>
-                <label>IMC: <input name='IMC' value={progres.IMC} type='number' onChange={handleChange} placeholder='IMC' required /></label>
-                <label>% Grasa: <input name='indice_grasa' value={progres.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' required /></label>
+                <label>Peso: <input name='peso' value={progres.peso} type='number' onChange={handleChange} placeholder='Peso (kg)' min='20' max='200' required /></label>
+                <label>IMC: <input name='IMC' value={progres.IMC} type='number' onChange={handleChange} placeholder='IMC' min='15' max='50' required /></label>
+                <label>% Grasa: <input name='indice_grasa' value={progres.indice_grasa} type='number' onChange={handleChange} placeholder='% Grasa' min='1' max='100' required /></label>
                 <textarea name='observaciones' value={progres.observaciones} onChange={handleChange} placeholder='Observaciones (opcional)' />
                 <button type='submit' className='register-Button'>Guardar Cambios</button>
             </form>
