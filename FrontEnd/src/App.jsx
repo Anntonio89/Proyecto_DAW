@@ -72,10 +72,11 @@ function App() {
           <Route path='/createDetails/:idPlan' element={<CreateDetails/>}/>
           <Route path='/createDetails' element={<CreateDetails/>}/>
           <Route path='/detailEdit/:id' element={<EditDetail/>}/>
+          {/* LISTA USUARIOS */}
+          <Route path='/usersList' element={<UsersList filtro={filtro}/>}/>
         </Route>        
         {/* Rutas protegidas con permiso solo para ADMIN */}
-        <Route element={<ProtectedRoutes rolPermitido={['ADMIN']}/>}>
-          <Route path='/usersList' element={<UsersList filtro={filtro}/>}/>
+        <Route element={<ProtectedRoutes rolPermitido={['ADMIN']}/>}>          
           <Route path='/userEdit/:id' element={<EditUser/>}/>
         </Route>      
         <Route path='*' element={<Error/>}/>

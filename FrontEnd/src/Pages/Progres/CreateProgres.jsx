@@ -59,6 +59,14 @@ function CreateProgres() {
             id_usuario: value,
             nombre_usuario: usuarioSeleccionado ? usuarioSeleccionado.nombre : ''
         }))
+    } else if (name === 'id_plan') {
+        const planSeleccionado = planes.find(p => String(p.id) === value)
+        setForm(prev => ({
+            ...prev,
+            id_plan: value,
+            nombre_plan: planSeleccionado ? planSeleccionado.plan : ''
+        }))
+    
     } else {
         setForm(prev => ({
             ...prev,

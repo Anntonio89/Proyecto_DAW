@@ -20,7 +20,7 @@ function Services() {
                 <div className='col-12 col-md-4 text-center mb-4'>
                   <NavLink to='/exerciceRutina' className={({ isActive }) => (isActive ? 'active' : '')}>
                     <img src='/5.jpg' className='img-fluid custom-img'/>
-                    <h5 style={{ fontFamily: 'Open Sans, sans-serif', color: '#d1006a' }}>RUTINAS DE ENTRENAMIENTO</h5>
+                    <h5 style={{ fontFamily: 'Open Sans, sans-serif', color: '#d1006a' }}>RUTINAS FUNCIONALES</h5>
                   </NavLink>
                 </div>
         </div>

@@ -1,14 +1,23 @@
 import {useState,useEffect} from 'react'
 import { NavLink } from 'react-router-dom'
 import axiosClient from '../../utils/function'
+import storage from '../../utils/storage'
 import Swal from 'sweetalert2'
 
 function UsersList({filtro}) {
 
     const [users,setUsers]=useState([])
+    const [modif, setModif] = useState(false)
     const usersFiltrados = users.filter(e => e.nombre.toLowerCase().includes(filtro.toLowerCase()))
 
     useEffect(()=>{
+
+        const user=storage.get('authUser')
+
+        if(user.rol==='ADMIN'){
+            setModif(true)
+        }
+
         const fetchUsers=async()=>{
             try {
                 const res=await axiosClient.get('http://localhost:3015/users')
@@ -90,18 +99,20 @@ function UsersList({filtro}) {
                                 <td>{users.edad}</td>
                                 <td>{users.sexo}</td>
                                 <td>{users.rol}</td>
-                                <td>
-                                <NavLink to={`/userEdit/${users.id}`}>
-                                    <button className='btn-custom-edit'>Editar</button>
-                                </NavLink>
-                                    <button className='btn-custom-delete'onClick={()=>handleDelete(users.id)}>Eliminar</button>
-                                </td>
+                                {modif && (
+                                    <td>
+                                    <NavLink to={`/userEdit/${users.id}`}>
+                                        <button className='btn-custom-edit'>Editar</button>
+                                    </NavLink>
+                                        <button className='btn-custom-delete'onClick={()=>handleDelete(users.id)}>Eliminar</button>
+                                    </td>
+                                )}
                             </tr>
                         ))}
                     </tbody>
                     </table>
                 ):(
-                    <p>No hay ejercicios disponibles</p>
+                    <p>No hay usuarios disponibles</p>
                 )}
                 
             </div>

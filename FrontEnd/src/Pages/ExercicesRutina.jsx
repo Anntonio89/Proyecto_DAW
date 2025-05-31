@@ -12,7 +12,7 @@ function ExerciceRut() {
     '/exercices/abdominales-asistidos-oblicuos.gif',
     '/exercices/abdominales crunch oblicuo.gif',
     '/exercices/abdominales crunch piernas elevadas.gif',
-    '/exercices/abdominales crunch.gif',
+    '/exercices/abdominales oblicuo banco.gif',
   ]
 
   const handlePause = () => {

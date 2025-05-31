@@ -125,34 +125,8 @@ function Login() {
                   </Link>
                 </>
               )}
-              {/*ENTRENADORES accederán a todos los planes asignados y a los progresos personales*/}
-              {userLogued.rol==='ENTRENADOR' && (
-                <>
-                  <Link to='/progresList' className='user-Progres' 
-                      style={{color:'#d1006a',
-                              textDecoration:'none',
-                              fontWeight:'bold',
-                            }}>
-                      Gestionar Progresos
-                  </Link>
-                  <Link to='/planList' className='user-Progres' 
-                      style={{color:'#d1006a',
-                              textDecoration:'none',
-                              fontWeight:'bold',
-                            }}>
-                      Gestionar Planes
-                  </Link>
-                  <Link to='/exerciceList' className='user-Progres' 
-                      style={{color:'#d1006a',
-                              textDecoration:'none',
-                              fontWeight:'bold',
-                            }}>
-                      Gestionar Ejercicios
-                  </Link>
-                </>
-              )}
-              {/*ADMIN accederá a todos los planes asignados y a los progresos personales, además de los usuarios*/}
-              {userLogued.rol==='ADMIN' && (
+              {/*ENTRENADORES/ADMINISTRADORES accederán a todos los planes asignados y a los progresos personales, además de a los usuarios*/}
+              {(userLogued.rol==='ENTRENADOR' || userLogued.rol==='ADMIN')  && (
                 <>
                   <Link to='/progresList' className='user-Progres' 
                       style={{color:'#d1006a',
@@ -183,7 +157,7 @@ function Login() {
                       Gestionar Usuarios
                   </Link>
                 </>
-              )}
+              )}              
 
               <button onClick={handleLogout}>Cerrar Sesión</button>
             </div>

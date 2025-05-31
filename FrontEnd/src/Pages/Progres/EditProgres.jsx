@@ -37,12 +37,24 @@ function EditProgres() {
         fetchPlanes()
     }, [])
 
-    const handleChange=(e)=>{
-        const{name, value}=e.target //Se extrae el nombre y el value del campo
-        setProgres({...progres, [name]:value})//Se realiza una copia del objeto progres, actualizando la propiedad correspondiente [name] con el nuevo vlor
-    }
+    const handleChange = (e) => {
+        const { name, value } = e.target
 
-   
+        if (name === 'id_plan') {
+            const planSeleccionado = planes.find(p => String(p.id) === value)
+            setProgres(prev => ({
+                ...prev,
+                id_plan: value,
+                nombre_plan: planSeleccionado ? planSeleccionado.plan : ''
+            }))
+        } else {
+            setProgres(prev => ({
+                ...prev,
+                [name]: value
+            }))
+        }
+    }
+       
     const handleSubmit =async(e)=>{
         e.preventDefault()
         try {

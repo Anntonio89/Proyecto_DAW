@@ -8,6 +8,8 @@ const port = process.env.PUERTO || process.env.PORT;
 const mySQLConfig=require('./utils/mysql.config')
 const methodOverride=require('method-override')
 const session = require('express-session')
+const swaggerUI=require("swagger-ui-express")//npm i swagger-ui-express
+const specs=require('./swagger/swagger')//Importa las especificaciones de swagger
 const userRoutes=require('./routes/user.routes')
 const planRoutes=require('./routes/plan.routes')
 const exerciceRoutes=require('./routes/exercice.routes')
@@ -65,6 +67,7 @@ app.use('/plan',planRoutes)
 app.use('/exercice',exerciceRoutes)
 app.use('/progres',progresRoutes)
 app.use('/details',detailsRoutes)
+app.use('/api-docs',swaggerUI.serve,swaggerUI.setup(specs))//Ruta para acceder a la documentación de la API
 
 app.use((req,res)=>{
     logger.error.fatal('NO EXISTE LA RUTA' +req.originalUrl)

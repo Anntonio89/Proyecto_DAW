@@ -139,13 +139,13 @@ useEffect(() => {
                     </select>
                 </label>
                 <label>Series:
-                    <input name='series' value={detail.series} onChange={handleChange} placeholder='Series' required />
+                    <input name='series' value={detail.series} onChange={handleChange} placeholder='Series' min='1' max='20' required />
                 </label>
                 <label>Repeticiones:
-                    <input name='repeticiones' value={detail.repeticiones} onChange={handleChange} placeholder='Repeticiones' required />
+                    <input name='repeticiones' value={detail.repeticiones} onChange={handleChange} placeholder='Repeticiones' min='1' max='100' required />
                 </label>
                 <label>Descanso
-                    <input name='descanso' value={detail.descanso} onChange={handleChange} placeholder='Descanso' required />
+                    <input name='descanso' value={detail.descanso} onChange={handleChange} placeholder='Descanso (min)' min='1' max='5' required />
                 </label>
                 <button type='submit' className='detail-button'>Guardar Detalle</button>
             </form>

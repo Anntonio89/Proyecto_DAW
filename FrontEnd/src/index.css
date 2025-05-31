@@ -322,7 +322,7 @@ nav.nav{
     background-image: url("/1.jpg");
     background-size: cover;
     color: white;
-    padding: 2rem;
+    padding-left: 180px;
     min-height: 100vh;
     display: flex;
     justify-content: space-between;

@@ -80,7 +80,7 @@ function DetailList() {
                                 <th>Dia Semana</th>
                                 <th>Series</th>
                                 <th>Repeticiones</th>
-                                <th>Descanso</th>
+                                <th>Descanso(min) </th>
                             </tr>
                         </thead>
                         <tbody>

@@ -128,9 +128,9 @@ function CreateDetail() {
                         </option>
                     ))}
             </select>
-            <input name='series' value={form.series} onChange={handleChange} placeholder='Series' min='1' required />                  
-            <input name='repeticiones' value={form.repeticiones} onChange={handleChange} placeholder='Repeticiones' min='1' required />                  
-            <input name='descanso' value={form.descanso} onChange={handleChange} placeholder='Descanso' min='0' required />                  
+            <input name='series' value={form.series} onChange={handleChange} placeholder='Series' min='1' max='20' required />                  
+            <input name='repeticiones' value={form.repeticiones} onChange={handleChange} placeholder='Repeticiones' min='1' max='100' required />                  
+            <input name='descanso' value={form.descanso} onChange={handleChange} placeholder='Descanso (min)' min='1' max='5' required />                  
             <button type='submit' className='plan-button'>Guardar Plan</button>
         </form>
     </div>
