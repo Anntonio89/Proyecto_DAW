@@ -85,7 +85,7 @@ exports.updateDetail=wrapAsync(async function (req,res,next){
         }
 
         console.log('Rol del usuario:', rol)
-        // Si no es el dueño del plan asociado al detalle y no es entrenador → prohibido
+        // Si no es el dueño del plan asociado al detalle y no es entrenador --> prohibido
         if (detalleActual.id_usuario !== idUser && rol !== 'ENTRENADOR' && rol !== 'ADMIN') {
             return next(new AppError('Sin permiso para modificar este detalle', 403))
         }
