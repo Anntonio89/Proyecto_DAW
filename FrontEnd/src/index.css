@@ -668,3 +668,63 @@ nav.nav{
   .List{
     min-height: 100vh;
   }
+
+  /* Por defecto, escondemos el botón hamburguesa */
+.desplegar {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #d1006a;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Menú desktop */
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Buscador móvil oculto por defecto */
+.busqueda-mobile {
+  display: none;
+}
+
+/* Media query para móviles */
+@media (max-width: 768px) {
+  .desplegar {
+    display: block; /* Mostramos el botón hamburguesa */
+  }
+
+  /* Ocultamos menú nav por defecto */
+  .nav {
+    display: none;
+    position: absolute;
+    top: 60px; /* Ajusta según el alto del header */
+    right: 10px;
+    background-color: black;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 1rem;
+    width: 200px;
+    z-index: 1000;
+  }
+
+  /* Cuando el menú está abierto */
+  .nav.nav-open {
+    display: flex;
+  }
+
+  /* Buscador móvil visible en móvil */
+  .busqueda-mobile {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  /* Buscador desktop oculto */
+  .busqueda-desktop {
+    display: none;
+  }
+}
