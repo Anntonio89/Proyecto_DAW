@@ -18,9 +18,11 @@ function Header({filtro, setFiltro}) {
   return (
     <>
     <header className='header'>
-      <button className='desplegar' onClick={()=> setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes /> : <FaBars />}
-      </button>
+        {/* Contenedor relativo para botón y menú */}
+      <div className='menu-container'>
+        <button className='desplegar' onClick={()=> setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
         <nav className={`nav ${menuOpen ? 'nav-open' : ''}`}>
             <NavLink to='/' className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>Inicio</NavLink>
             <NavLink to='/services' className={({ isActive }) => (isActive ? 'active' : '')} onClick={() => setMenuOpen(false)}>Qué ofrecemos</NavLink>
@@ -32,12 +34,11 @@ function Header({filtro, setFiltro}) {
                             {userLogued.nombre}<p style={{marginLeft: '25px',fontSize:'12px'}}>{userLogued.rol}</p>
                           </NavLink>
             )}
-            <div className='busqueda-mobile'>
-              <input type='text' placeholder='Buscar...' value={filtro} onChange={(e)=>setFiltro(e.target.value)}/>
-            </div>
+            
         </nav>
+      </div>
         {/* Buscador para desktop */}
-        <div className='busqueda-desktop'>
+        <div className='busqueda'>
             <input type='text' placeholder='Buscar...' value={filtro} onChange={(e)=>setFiltro(e.target.value)}/>
         </div>
     </header>   
