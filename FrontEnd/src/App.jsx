@@ -45,9 +45,9 @@ function App() {
         <Route path="/users" element={<Register/>}/>
         <Route path="/login" element={<Login />} />   
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/exerciceRutina' element={<ExerciceRut/>}/>  
         <Route element={<ProtectedRoutes rolPermitido={['USUARIO','ENTRENADOR', 'ADMIN']}/>}>
           <Route path='/details-progres' element={<DetailsProgres/>}/>
-          <Route path='/exerciceRutina' element={<ExerciceRut/>}/>  
           <Route path='/planUser' element={<PlanUser/>}/> 
           <Route path='/exerciceList' element={<ExerciceList filtro={filtro}/>}/>
           <Route path='/exerciceDetail/:id' element={<DetailsExercice/>}/>
